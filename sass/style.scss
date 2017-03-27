@@ -25,7 +25,7 @@
 }
 
 html{
-	background: $BAprimary-color;
+	background: $ba-secondary;
 }
 
 body{
@@ -99,7 +99,7 @@ section{
 		text-transform: uppercase;
 		font-size: 14px;		
 		font-weight: 700;
-		color: $BAsecondary-color;		
+		color: $ba-primary;		
 		margin-bottom: 46px;
 	}
 	.s-left, .s-right{
@@ -113,7 +113,7 @@ section{
 				font-size: 18px;
 				line-height: 24px;
 				font-weight: 300;
-				color: $BAprimary-color;
+				color: $ba-secondary;
 				margin-bottom: 20px;
 				display: inline-block;
 			}
@@ -133,27 +133,31 @@ section{
 		label{
 			position: relative;
 			top: -26px;
-			font-size: 18px;
+			font-size: 16px;
 			font-weight: 300;
-			color: $BAtext-color;
+			color: $ba-text;
 		}
 		.lb-txt{
 			top: 0px;
 		}
+		input{
+			height: 40px;
+		}
 		input, textarea{
-			padding: 0 0 6px 0;
+			box-sizing: border-box;
+			padding: 12px 0 4px 0;
 			font-family: 'Roboto Condensed', sans-serif;
 			border-top: none;
 			border-right: none;
 			border-left: none;
-			border-bottom: 2px solid $BAtext-color;
+			border-bottom: 2px solid $ba-text;
 			outline: none;
 			transition: all .3s ease;
-			color: $BAsecondary-color;
-			font-size: 18px;
+			color: $ba-primary;
+			font-size: 16px;
 			font-weight: 300;
 			&:focus{
-				border-bottom: 2px solid $BAsecondary-color;
+				border-bottom: 2px solid $ba-primary;
 			}
 		}
 		textarea{
@@ -162,9 +166,8 @@ section{
 		input[type=submit]{
 			background: none;
 			border: none;
-			margin-top: 25px;
 			&:hover{
-				color: $BAsecondary-color;
+				color: $ba-primary;
 			}
 		}
 		.btn-outline{
@@ -172,13 +175,13 @@ section{
 			position: relative;
 			bottom: 30px;
 			@include btn(45px,none);
-			border: 1px solid $BAprimary-color;
+			border: 1px solid $ba-secondary;
 			transition: all .3s ease;
 			.arrow{
 				transform: rotate(-90deg);
 			}
 			&:hover{
-				border: 1px solid $BAsecondary-color;
+				border: 1px solid $ba-primary;
 			}
 		}
 	}
@@ -189,7 +192,6 @@ footer{
 	width: 100%;
 	flex-direction: column;
 	text-align: center;
-	background: $BAprimary-color;
 	a img{
 		cursor: pointer;
 		user-select: none;

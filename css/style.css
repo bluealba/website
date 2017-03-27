@@ -142,13 +142,16 @@ section {
   section form label {
     position: relative;
     top: -26px;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 300;
     color: #CCCCCC; }
   section form .lb-txt {
     top: 0px; }
+  section form input {
+    height: 40px; }
   section form input, section form textarea {
-    padding: 0 0 6px 0;
+    box-sizing: border-box;
+    padding: 12px 0 4px 0;
     font-family: 'Roboto Condensed', sans-serif;
     border-top: none;
     border-right: none;
@@ -157,7 +160,7 @@ section {
     outline: none;
     transition: all .3s ease;
     color: #20264D;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 300; }
     section form input:focus, section form textarea:focus {
       border-bottom: 2px solid #20264D; }
@@ -165,8 +168,7 @@ section {
     resize: none; }
   section form input[type=submit] {
     background: none;
-    border: none;
-    margin-top: 25px; }
+    border: none; }
     section form input[type=submit]:hover {
       color: #20264D; }
   section form .btn-outline {
@@ -192,8 +194,7 @@ footer {
   color: #fff;
   width: 100%;
   flex-direction: column;
-  text-align: center;
-  background: #67A5BA; }
+  text-align: center; }
   footer a img {
     cursor: pointer;
     user-select: none;
