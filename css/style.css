@@ -53,43 +53,62 @@ body {
   flex-direction: column;
   font-family: 'Roboto Condensed', sans-serif; }
 
-body, header, section, footer {
+body, section, footer {
   display: flex;
+  flex-direction: column;
   justify-content: space-between; }
 
 .container {
-  width: 90%;
+  width: 80%;
   margin: auto; }
+
+.top, .bottom {
+  height: 100vh; }
 
 a {
   text-decoration: none; }
 
 .arrow {
-  width: 18px;
-  height: 18px;
-  padding: 13.5px; }
+  height: 24px;
+  padding: 20px;
+  fill: #67A5BA;
+  transition: all .3s ease; }
+  .arrow:hover {
+    fill: #20264D; }
 
-header {
-  flex-direction: column;
-  width: 100%;
+.y-float {
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out; }
+
+.y-float:hover, .y-float:focus, .y-float:active {
+  -webkit-transform: translateY(-6px);
+  transform: translateY(-6px); }
+
+.top {
+  width: 100vw;
   text-align: center;
   color: #fff;
   font-weight: 300; }
-  header .container {
-    padding: 2% 0; }
-    header .container a img {
+  .top .container {
+    padding: 5% 0 0; }
+    .top .container a .logo {
+      fill: #fff;
       user-select: none;
       width: 300px;
       margin: 62px 0; }
-    header .container h1 {
+    .top .container h1 {
       font-size: 30px;
       font-weight: 300;
       margin-bottom: 32px; }
-    header .container .btn-fill {
+    .top .container .btn-fill {
       user-select: none;
       display: inline-block;
-      width: 45px;
-      height: 45px;
+      width: 65px;
+      height: 65px;
       -ms-border-radius: 50%;
       -webkit-border-radius: 50%;
       -moz-border-radius: 50%;
@@ -102,54 +121,52 @@ header {
       -o-box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
       box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
       border: 1px solid #fff;
-      margin: 10px;
       cursor: pointer;
       transition: all .2s ease-in-out; }
-      header .container .btn-fill:hover {
-        transform: scale(1.1, 1.1); }
 
-section {
-  background: #fff; }
-  section .container {
+.info {
+  background: #fff;
+  height: 90vh; }
+  .info .container {
     display: flex;
     justify-content: space-between; }
-  section h3 {
+  .info h3 {
     letter-spacing: 1px;
     text-transform: uppercase;
     font-size: 14px;
     font-weight: 700;
     color: #20264D;
     margin-bottom: 46px; }
-  section .s-left, section .s-right {
-    padding: 5% 0 2%;
+  .info .about, .info .contact {
+    padding: 15% 0 0;
     display: inline-block; }
-  section .s-left {
+  .info .about {
     width: 50%; }
-    section .s-left .content p {
+    .info .about .content p {
       font-size: 18px;
       line-height: 24px;
       font-weight: 300;
       color: #67A5BA;
       margin-bottom: 20px;
       display: inline-block; }
-    section .s-left .content :first-child {
+    .info .about .content :first-child {
       margin-bottom: 0; }
-  section .s-right {
+  .info .contact {
     width: 40%; }
-    section .s-right form {
+    .info .contact form {
       display: flex;
       flex-direction: column; }
-  section form label {
+  .info form label {
     position: relative;
     top: -26px;
     font-size: 16px;
     font-weight: 300;
     color: #CCCCCC; }
-  section form .lb-txt {
+  .info form .lb-txt {
     top: 0px; }
-  section form input {
+  .info form input {
     height: 40px; }
-  section form input, section form textarea {
+  .info form input, .info form textarea {
     box-sizing: border-box;
     padding: 12px 0 4px 0;
     font-family: 'Roboto Condensed', sans-serif;
@@ -162,19 +179,140 @@ section {
     color: #20264D;
     font-size: 16px;
     font-weight: 300; }
-    section form input:focus, section form textarea:focus {
+    .info form input:focus, .info form textarea:focus {
       border-bottom: 2px solid #20264D; }
-  section form textarea {
+  .info form textarea {
     resize: none; }
-  section form input[type=submit] {
-    background: none;
-    border: none; }
-    section form input[type=submit]:hover {
-      color: #20264D; }
-  section form .btn-outline {
+  .info form input[type=submit] {
+    display: none; }
+  .info form .btn-outline {
+    margin-top: 40px;
     cursor: pointer;
-    position: relative;
-    bottom: 30px;
+    display: inline-block;
+    width: 65px;
+    height: 65px;
+    -ms-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    border: 1px solid #67A5BA;
+    transition: all .3s ease; }
+    .info form .btn-outline .arrow {
+      transform: rotate(-90deg); }
+      .info form .btn-outline .arrow:hover {
+        transform: rotate(270deg); }
+    .info form .btn-outline:hover {
+      border: 1px solid #20264D; }
+
+footer {
+  color: #fff;
+  width: 100vw;
+  text-align: center; }
+  footer a .iso {
+    fill: #fff;
+    cursor: pointer;
+    user-select: none;
+    width: 35px;
+    user-select: none;
+    opacity: .8;
+    transition: all .3s ease; }
+    footer a .iso:hover {
+      opacity: 1; }
+  footer p {
+    font-size: 12px;
+    font-weight: 300;
+    margin: 10px 0 25px; }
+
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .top .container {
+    padding: 10% 0 2%; }
+    .top .container a .logo {
+      width: 250px; }
+
+  .bottom .about, .bottom .contact {
+    padding: 10% 0 5%; }
+
+  .info form .btn-outline {
+    margin-top: 20px; }
+
+  footer a .iso {
+    margin-top: 35px; }
+  footer p {
+    margin-bottom: 32px; } }
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .top .container {
+    padding: 20% 0 5%; }
+    .top .container h1 {
+      font-size: 38px;
+      line-height: 46px; }
+      .top .container h1 .media-br {
+        display: block; }
+
+  .bottom .container {
+    flex-direction: column;
+    align-items: center; }
+    .bottom .container h3 {
+      text-align: center;
+      font-size: 20px;
+      margin-bottom: 26px; }
+
+  .bottom .about, .bottom .contact {
+    width: 100%;
+    padding: 8% 0 0; }
+
+  .bottom .about .content p {
+    margin-bottom: 12px; }
+    .bottom .about .content p:last-child {
+      margin-bottom: 0; }
+
+  .info form .btn-outline {
+    margin-top: 20px; }
+
+  footer a .iso {
+    margin-top: 25px; } }
+@media screen and (max-width: 767px) and (orientation: landscape) {
+  .top .media-hide {
+    display: none; }
+
+  .top .container {
+    padding: 6% 0; }
+    .top .container a .logo {
+      width: 150px;
+      margin: 30px 0; }
+    .top .container h1 {
+      font-size: 24px;
+      line-height: 30px; }
+
+  .info {
+    height: 200vh; }
+
+  .bottom .container {
+    flex-direction: column;
+    align-items: center; }
+    .bottom .container h3 {
+      text-align: center;
+      margin-bottom: 16px; }
+
+  .bottom .about, .bottom .contact {
+    width: 100%;
+    height: 80vh;
+    padding: 8% 0 0; }
+
+  .bottom .about .content p {
+    margin-bottom: 10px;
+    font-size: 16px;
+    line-height: 22px; }
+    .bottom .about .content p:first-child {
+      margin-top: 20px; }
+    .bottom .about .content p:last-child {
+      margin-bottom: 0; }
+
+  .bottom .contact form label, .bottom .contact form input {
+    font-size: 14px; }
+  .bottom .contact form textarea {
+    height: 60px; }
+  .bottom .contact form .btn-outline {
     display: inline-block;
     width: 45px;
     height: 45px;
@@ -183,139 +321,75 @@ section {
     -moz-border-radius: 50%;
     -o-border-radius: 50%;
     border-radius: 50%;
-    border: 1px solid #67A5BA;
-    transition: all .3s ease; }
-    section form .btn-outline .arrow {
-      transform: rotate(-90deg); }
-    section form .btn-outline:hover {
-      border: 1px solid #20264D; }
+    margin: 10px 0; }
+    .bottom .contact form .btn-outline .arrow {
+      height: 18px;
+      padding: 14px; }
 
-footer {
-  color: #fff;
-  width: 100%;
-  flex-direction: column;
-  text-align: center; }
-  footer a img {
-    cursor: pointer;
-    user-select: none;
-    width: 35px;
-    user-select: none;
-    margin-top: 25px;
-    opacity: .8;
-    transition: all .3s ease; }
-    footer a img:hover {
-      opacity: 1; }
-  footer p {
-    font-size: 12px;
-    font-weight: 300;
-    margin: 10px 0 20px; }
-
-@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-  header .container {
-    padding: 10% 0 2%; }
-    header .container a img {
-      width: 250px; }
-
-  section .s-left, section .s-right {
-    padding: 10% 0 5%; }
-
-  footer a img {
-    margin-top: 35px; }
-  footer p {
-    margin-bottom: 32px; } }
-@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
-  .container {
-    width: 80%; }
-
-  header .container {
-    padding: 20% 0 5%; }
-    header .container h1 {
-      font-size: 38px;
-      line-height: 46px; }
-      header .container h1 .media-br {
-        display: block; }
-
-  section .container {
-    flex-direction: column;
-    align-items: center; }
-    section .container h3 {
-      text-align: center;
-      font-size: 20px; }
-
-  section .s-left, section .s-right {
-    width: 100%;
-    padding: 10% 0 0; }
-
-  section .s-left .content p {
-    font-size: 20px;
-    line-height: 26px; }
-    section .s-left .content p :last-child {
-      margin-bottom: 0; } }
-@media screen and (max-width: 767px) and (orientation: landscape) {
-  .container {
-    width: 80%; }
-
-  header .media-hide {
+  footer a .iso {
     display: none; }
-
-  header .container {
-    padding: 6% 0; }
-    header .container a img {
-      width: 150px;
-      margin: 35px 0; }
-    header .container h1 {
-      font-size: 24px;
-      line-height: 30px; }
-
-  section .container {
-    flex-direction: column;
-    align-items: center; }
-    section .container h3 {
-      text-align: center;
-      margin-bottom: 26px; }
-
-  section .s-left, section .s-right {
-    width: 100%;
-    padding: 5% 0 0; }
-
-  section .s-left .content p {
-    margin-bottom: 10px; }
-    section .s-left .content p :last-child {
-      margin-bottom: 0; }
-
-  section .s-right form label, section .s-right form input {
-    font-size: 16px; }
-  section .s-right form textarea {
-    height: 110px; } }
+  footer p {
+    margin: 10px 0; } }
 @media screen and (max-width: 767px) and (orientation: portrait) {
-  .container {
-    width: 80%; }
-
-  header .media-hide {
+  .top .media-hide {
     display: none; }
 
-  header .container {
-    padding: 47% 0; }
-    header .container a img {
+  .top .container {
+    padding: 6% 0; }
+    .top .container a .logo {
       width: 150px;
       margin: 30px 0; }
-    header .container h1 {
+    .top .container h1 {
       font-size: 24px;
       line-height: 30px; }
-      header .container h1 .media-br {
-        display: block; }
 
-  section .container {
+  .info {
+    height: 200vh; }
+
+  .bottom .container {
     flex-direction: column;
     align-items: center; }
-    section .container h3 {
-      text-align: center; }
+    .bottom .container h3 {
+      text-align: center;
+      margin-bottom: 16px; }
 
-  section .s-left, section .s-right {
-    width: 100%;
-    padding: 20% 0 0; }
+  .bottom .about, .bottom .contact {
+    width: 90%;
+    height: 80vh;
+    padding: 20% 0 15%; }
 
-  section .s-left .content p:last-child {
-    margin-bottom: 0; } }
+  .bottom .about .content p {
+    margin-bottom: 10px;
+    font-size: 16px;
+    line-height: 22px; }
+    .bottom .about .content p:first-child {
+      margin-top: 48px; }
+    .bottom .about .content p:last-child {
+      margin-bottom: 0; }
+
+  .bottom .contact form {
+    margin-top: 48px; }
+    .bottom .contact form label, .bottom .contact form input {
+      font-size: 14px; }
+    .bottom .contact form textarea {
+      height: 260px; }
+    .bottom .contact form .btn-outline {
+      display: inline-block;
+      width: 45px;
+      height: 45px;
+      -ms-border-radius: 50%;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -o-border-radius: 50%;
+      border-radius: 50%;
+      margin: 20px 0 0; }
+      .bottom .contact form .btn-outline .arrow {
+        height: 18px;
+        padding: 14px; }
+
+  footer a .iso {
+    display: none; }
+  footer p {
+    margin: 10px 0; } }
 
 /*# sourceMappingURL=style.css.map */
