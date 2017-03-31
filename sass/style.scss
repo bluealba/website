@@ -65,22 +65,8 @@ body, section, footer{
 	fill: $ba-secondary;
 }
 
-.y-float {
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-timing-function: ease-out;
-  transition-timing-function: ease-out;
-}
-
-.y-float:hover, .y-float:focus, .y-float:active{
-  -webkit-transform: translateY(-6px);
-  transform: translateY(-6px);
-}
-
 .top{
-	background: linear-gradient(45deg, $ba-secondary, #5095F4);
+	background: linear-gradient(45deg, $ba-secondary, #7EC9BA);
 	width: 100vw;
 	min-height: 600px;
 	text-align: center;
@@ -106,6 +92,9 @@ body, section, footer{
 			border: 1px solid #fff;			
 			cursor: pointer;
 			transition: all .2s ease-in-out;
+			&:hover{
+				transform: scale(1.1, 1.1);
+			}
 		}
 	}	
 }
@@ -123,7 +112,7 @@ body, section, footer{
 		text-transform: uppercase;
 		font-size: 14px;		
 		font-weight: 700;
-		color: $ba-text;		
+		color: $ba-ether;		
 		margin-bottom: 46px;
 	}
 	.about, .contact{
@@ -172,7 +161,7 @@ body, section, footer{
     		font-size: 12px;
     	}	
 		input{
-			padding-top: 8px;
+			padding-top: 9px;
 			margin-bottom: 8px;
 			height: 40px;
 		}
@@ -207,12 +196,12 @@ body, section, footer{
 			cursor: pointer;
 			@include btn(65px,none);
 			border: 1px solid $ba-secondary;
+			transition: all .3s ease;
 			.arrow{
 				transform: rotate(-90deg);
-				transition: all .3s ease;
-				&:hover{
-					transform: rotate(270deg);
-				}
+			}
+			&:hover{
+				transform: rotate(360deg);
 			}
 		}
 	}
