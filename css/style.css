@@ -52,7 +52,7 @@ html, body {
   min-height: 100%; }
 
 html {
-  background: #67A5BA;
+  background: #595959;
   -webkit-font-smoothing: antialiased; }
 
 body {
@@ -91,7 +91,7 @@ body, section, footer {
   transform: translateY(-6px); }
 
 .top {
-  background: linear-gradient(45deg, #67A5BA, #46BCD1);
+  background: linear-gradient(45deg, #67A5BA, #7EC9BA);
   width: 100vw;
   min-height: 600px;
   text-align: center;
@@ -216,6 +216,7 @@ body, section, footer {
         transform: rotate(270deg); }
 
 footer {
+  background: #67A5BA;
   color: #fff;
   width: 100vw;
   text-align: center; }

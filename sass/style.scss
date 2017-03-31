@@ -33,7 +33,7 @@ html, body{
 }
 
 html{
-	background: $ba-secondary;
+	background: $ba-ether;
 	-webkit-font-smoothing: antialiased;
 }
 
@@ -80,7 +80,7 @@ body, section, footer{
 }
 
 .top{
-	background: linear-gradient(45deg, $ba-secondary, #46BCD1);
+	background: linear-gradient(45deg, $ba-secondary, #7EC9BA);
 	width: 100vw;
 	min-height: 600px;
 	text-align: center;
@@ -217,6 +217,7 @@ body, section, footer{
 }
 
 footer{
+	background: $ba-secondary;
 	color: #fff;
 	width: 100vw;
 	text-align: center;
