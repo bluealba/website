@@ -24,11 +24,21 @@
 	@include border-radius(50%);
 }
 
+*{
+	box-sizing: border-box;
+}
+
+html, body{
+	min-height: 100%;
+}
+
 html{
 	background: $ba-secondary;
+	-webkit-font-smoothing: antialiased;
 }
 
 body{
+	min-width: 300px;
 	margin: auto;
 	flex-direction: column;
 	font-family: 'Roboto Condensed', sans-serif;
@@ -49,18 +59,10 @@ body, section, footer{
 	height: 100vh;
 }
 
-a{
-	text-decoration: none;
-}
-
 .arrow{
 	height: 24px;
-	padding: 20px;
+	margin: 19px;
 	fill: $ba-secondary;
-	transition: all .3s ease;
-	&:hover{
-		fill: $ba-primary;
-	}
 }
 
 .y-float {
@@ -78,13 +80,14 @@ a{
 }
 
 .top{
+	background: linear-gradient(45deg, $ba-secondary, #46BCD1);
 	width: 100vw;
+	min-height: 600px;
 	text-align: center;
 	color: #fff;
 	font-weight: 300;
 	.container{
-		padding: 5% 0 0;
-		a .logo{
+		.logo{
 			fill: #fff;
 			user-select: none;
 			width: 300px;
@@ -107,9 +110,10 @@ a{
 	}	
 }
 
-.info{
+.main{
+	display: flex;
 	background: #fff;
-	height: 90vh;
+	flex-grow: 1;
 	.container{
 		display: flex;
 		justify-content: space-between;
@@ -119,11 +123,11 @@ a{
 		text-transform: uppercase;
 		font-size: 14px;		
 		font-weight: 700;
-		color: $ba-primary;		
+		color: $ba-text;		
 		margin-bottom: 46px;
 	}
 	.about, .contact{
-		padding: 15% 0 0;
+		padding: 20px 0;
 		display: inline-block;
 	}
 	.about{
@@ -133,7 +137,7 @@ a{
 				font-size: 18px;
 				line-height: 24px;
 				font-weight: 300;
-				color: $ba-secondary;
+				color: $ba-primary;
 				margin-bottom: 20px;
 				display: inline-block;
 			}
@@ -150,56 +154,63 @@ a{
 		}
 	}
 	form{
-		label{
+		.info{
 			position: relative;
-			top: -26px;
+			height: auto;
+		}
+		label{
+			position: absolute;
+			left: 0;
+			top: 18px;
 			font-size: 16px;
-			font-weight: 300;
-			color: $ba-text;
+		    font-weight: 300;
+		    color: rgba($ba-primary, .5);
+		    transition: all 0.2s ease;
 		}
-		.lb-txt{
-			top: 0px;
-		}
+		.vi-text:focus + label, .vi-text.vi-not-empty + label{
+    		transform: translate(0, -20px);
+    		font-size: 12px;
+    	}	
 		input{
+			margin-bottom: 8px;
 			height: 40px;
 		}
 		input, textarea{
-			box-sizing: border-box;
-			padding: 12px 0 4px 0;
+			width: 100%;
 			font-family: 'Roboto Condensed', sans-serif;
 			border-top: none;
 			border-right: none;
 			border-left: none;
-			border-bottom: 2px solid $ba-text;
+			border-bottom: 1px solid rgba($ba-primary, .5);
 			outline: none;
 			transition: all .3s ease;
 			color: $ba-primary;
 			font-size: 16px;
-			font-weight: 300;
+			font-weight: 400;
 			&:focus{
-				border-bottom: 2px solid $ba-primary;
+				border-bottom: 1px solid $ba-pop;
 			}
 		}
 		textarea{
+			position: relative;
+			top: 40px;
 			resize: none;
 		}
 		input[type=submit]{
 			display: none;
 		}
 		.btn-outline{
-			margin-top: 40px;
+			position: relative;
+			margin: 50px 0 0;
 			cursor: pointer;
 			@include btn(65px,none);
 			border: 1px solid $ba-secondary;
-			transition: all .3s ease;
 			.arrow{
 				transform: rotate(-90deg);
+				transition: all .3s ease;
 				&:hover{
 					transform: rotate(270deg);
 				}
-			}
-			&:hover{
-				border: 1px solid $ba-primary;
 			}
 		}
 	}
@@ -209,21 +220,15 @@ footer{
 	color: #fff;
 	width: 100vw;
 	text-align: center;
-	a .iso{
+	.iso{
 		fill: #fff;
-		cursor: pointer;
-		user-select: none;
 		width: 35px;
 		user-select: none;
-		opacity: .8;
-		transition: all .3s ease;
-		&:hover{
-			opacity: 1;
-		}
+		margin-top: 25px;
 	}
 	p{
 		font-size: 12px;
-		font-weight: 300;
+		font-weight: 400;
 		margin: 10px 0 25px;
 	}
 }
@@ -231,30 +236,14 @@ footer{
 
 @media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape){
 	.top .container{
-		padding: 10% 0 2%;
-		a .logo{
+		.logo{
 			width: 250px;
-		}
-	}
-	.bottom .about, .bottom .contact{
-		padding: 10% 0 5%;
-	}
-	.info form .btn-outline{
-		margin-top: 20px;
-	}
-	footer{
-		a .iso{
-			margin-top: 35px;
-		}
-		p{
-			margin-bottom: 32px;
 		}
 	}
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait){
 	.top .container{
-		padding: 20% 0 5%;
 		h1{ 
 			font-size: 38px;
 			line-height: 46px;
@@ -262,7 +251,7 @@ footer{
 				display: block;
 			}
 		}	
-	}	
+	}
 	.bottom .container{
 		flex-direction: column;
 		align-items: center;
@@ -274,7 +263,6 @@ footer{
 	}
 	.bottom .about, .bottom .contact{
 		width: 100%;
-		padding: 8% 0 0;
 	}
 	.bottom .about .content p{
 		margin-bottom: 12px;
@@ -282,21 +270,17 @@ footer{
 			margin-bottom: 0;
 		}
 	}
-	.info form .btn-outline{
-		margin-top: 20px;
-	}
-	footer a .iso{
-		margin-top: 25px;
-	}
 }
 
-@media screen and (max-width: 767px) and (orientation: landscape){
+@media screen and (min-width: 300px) and (max-width: 767px) and (orientation: landscape){
+	.top{
+		min-height: 300px;
+	}
 	.top .media-hide{
 		display: none;
 	}
 	.top .container{
-		padding: 6% 0;
-		a .logo{
+		.logo{
 			width: 150px;
 			margin: 30px 0;
 		}
@@ -305,8 +289,8 @@ footer{
 			line-height: 30px;
 		}
 	}
-	.info{
-		height: 200vh;
+	.bottom{
+		height: 100%;
 	}
 	.bottom .container{
 		flex-direction: column;
@@ -318,38 +302,29 @@ footer{
 	}
 	.bottom .about, .bottom .contact{
 		width: 100%;
-		height: 80vh;
-		padding: 8% 0 0;
 	}
 	.bottom .about .content p{
 		margin-bottom: 10px;
 		font-size: 16px;
 		line-height: 22px;
-		&:first-child{
-			margin-top: 20px;
-		}
 		&:last-child{
 			margin-bottom: 0;
 		}
 	}
 	.bottom .contact form{
-		label, input{
-			font-size: 14px;
-		}
 		textarea{
-			height: 60px;
+			height: 100px;
 		}
 		.btn-outline{
 			@include btn(45px,none);
-			margin: 10px 0;
 			.arrow{
 				height: 18px;
-				padding: 14px;
+				margin: 13px;
 			}
 		}
 	}
 	footer{
-		a .iso{
+		.iso{
 			display: none;
 		}
 		p{
@@ -358,13 +333,12 @@ footer{
 	}
 }
 
-@media screen and (max-width: 767px) and (orientation: portrait){	
+@media screen and (min-width: 300px) and (max-width: 767px) and (orientation: portrait){	
 	.top .media-hide{
 		display: none;
 	}
 	.top .container{
-		padding: 6% 0;
-		a .logo{
+		.logo{
 			width: 150px;
 			margin: 30px 0;
 		}
@@ -373,8 +347,8 @@ footer{
 			line-height: 30px;
 		}
 	}
-	.info{
-		height: 200vh;
+	.bottom{
+		height: 100%;
 	}
 	.bottom .container{
 		flex-direction: column;
@@ -385,40 +359,27 @@ footer{
 		}
 	}
 	.bottom .about, .bottom .contact{
-		width: 90%;
-		height: 80vh;
-		padding: 20% 0 15%;
+		width: 100%;
 	}
 	.bottom .about .content p{
 		margin-bottom: 10px;
 		font-size: 16px;
 		line-height: 22px;
-		&:first-child{
-			margin-top: 48px;
-		}
 		&:last-child{
 			margin-bottom: 0;
 		}
 	}
 	.bottom .contact form{
-		margin-top: 48px;
-		label, input{
-			font-size: 14px;
-		}
-		textarea{
-			height: 260px;
-		}
 		.btn-outline{
 			@include btn(45px,none);
-			margin: 20px 0 0;
 			.arrow{
 				height: 18px;
-				padding: 14px;
+				margin: 13px;
 			}
 		}
 	}
 	footer{
-		a .iso{
+		.iso{
 			display: none;
 		}
 		p{
