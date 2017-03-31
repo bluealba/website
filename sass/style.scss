@@ -80,7 +80,7 @@ body, section, footer{
 }
 
 .top{
-	background: linear-gradient(45deg, $ba-secondary, #7EC9BA);
+	background: linear-gradient(45deg, $ba-secondary, #5095F4);
 	width: 100vw;
 	min-height: 600px;
 	text-align: center;
@@ -172,6 +172,7 @@ body, section, footer{
     		font-size: 12px;
     	}	
 		input{
+			padding-top: 8px;
 			margin-bottom: 8px;
 			height: 40px;
 		}
@@ -195,6 +196,7 @@ body, section, footer{
 			position: relative;
 			top: 40px;
 			resize: none;
+			padding: 0;
 		}
 		input[type=submit]{
 			display: none;
