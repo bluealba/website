@@ -239,7 +239,7 @@ body, section, footer {
       transform: rotate(360deg); }
 
 footer {
-  background: #67A5BA;
+  background: linear-gradient(45deg, #7EC9BA, #67A5BA);
   color: #fff;
   width: 100vw;
   text-align: center; }
@@ -250,7 +250,7 @@ footer {
     margin-top: 25px; }
   footer p {
     font-size: 12px;
-    font-weight: 400;
+    font-weight: 300;
     margin: 10px 0 25px; }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
