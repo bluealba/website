@@ -65,8 +65,33 @@ body, section, footer{
 	fill: $ba-secondary;
 }
 
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-o-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
 .top{
 	background: linear-gradient(45deg, $ba-secondary, #7EC9BA);
+	-webkit-animation: AnimationName 3s ease infinite;
+	-moz-animation: AnimationName 3s ease infinite;
+	-o-animation: AnimationName 3s ease infinite;
+	animation: AnimationName 3s ease infinite;
 	width: 100vw;
 	min-height: 600px;
 	text-align: center;
@@ -130,9 +155,6 @@ body, section, footer{
 				margin-bottom: 20px;
 				display: inline-block;
 			}
-			:first-child{
-				margin-bottom: 0;
-			}
 		}	
 	}
 	.contact{
@@ -148,6 +170,7 @@ body, section, footer{
 			height: auto;
 		}
 		label{
+			pointer-events: none;
 			position: absolute;
 			left: 0;
 			top: 18px;

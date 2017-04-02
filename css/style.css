@@ -78,8 +78,40 @@ body, section, footer {
   margin: 19px;
   fill: #67A5BA; }
 
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 0% 50%; }
+  50% {
+    background-position: 100% 50%; }
+  100% {
+    background-position: 0% 50%; } }
+@-moz-keyframes AnimationName {
+  0% {
+    background-position: 0% 50%; }
+  50% {
+    background-position: 100% 50%; }
+  100% {
+    background-position: 0% 50%; } }
+@-o-keyframes AnimationName {
+  0% {
+    background-position: 0% 50%; }
+  50% {
+    background-position: 100% 50%; }
+  100% {
+    background-position: 0% 50%; } }
+@keyframes AnimationName {
+  0% {
+    background-position: 0% 50%; }
+  50% {
+    background-position: 100% 50%; }
+  100% {
+    background-position: 0% 50%; } }
 .top {
   background: linear-gradient(45deg, #67A5BA, #7EC9BA);
+  -webkit-animation: AnimationName 3s ease infinite;
+  -moz-animation: AnimationName 3s ease infinite;
+  -o-animation: AnimationName 3s ease infinite;
+  animation: AnimationName 3s ease infinite;
   width: 100vw;
   min-height: 600px;
   text-align: center;
@@ -142,8 +174,6 @@ body, section, footer {
       color: #38383a;
       margin-bottom: 20px;
       display: inline-block; }
-    .main .about .content :first-child {
-      margin-bottom: 0; }
   .main .contact {
     width: 40%; }
     .main .contact form {
@@ -153,6 +183,7 @@ body, section, footer {
     position: relative;
     height: auto; }
   .main form label {
+    pointer-events: none;
     position: absolute;
     left: 0;
     top: 18px;
