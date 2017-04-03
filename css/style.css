@@ -106,9 +106,6 @@ a {
   margin: 19px;
   fill: #67A5BA; }
 
-.bottom {
-  background: #fff; }
-
 .top {
   background: linear-gradient(45deg, #67A5BA, #7EC9BA);
   background-size: 400% 400%;
@@ -152,98 +149,99 @@ a {
     .top .container .btn-fill:hover {
       transform: scale(1.1, 1.1); }
 
-.main {
-  display: flex;
-  justify-content: space-between;
-  flex-grow: 1; }
-  .main h3 {
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    font-size: 14px;
-    font-weight: 700;
-    color: #595959;
-    margin-bottom: 46px; }
-  .main .about, .main .contact {
-    box-sizing: border-box;
-    padding: 20px 0;
-    display: inline-block; }
-  .main .about {
-    width: 50%; }
-    .main .about .content p {
-      font-size: 18px;
-      line-height: 24px;
-      font-weight: 300;
-      color: #38383a;
-      margin-bottom: 20px;
+.bottom {
+  background: #fff; }
+  .bottom .main {
+    display: flex;
+    justify-content: space-between; }
+    .bottom .main h3 {
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      font-size: 14px;
+      font-weight: 700;
+      color: #595959;
+      margin-bottom: 46px; }
+    .bottom .main .about, .bottom .main .contact {
+      box-sizing: border-box;
+      padding: 20px 0;
       display: inline-block; }
-  .main .contact {
-    width: 40%; }
-    .main .contact form {
-      display: flex;
-      flex-direction: column; }
-  .main form .info {
-    position: relative;
-    height: auto; }
-  .main form label {
-    pointer-events: none;
-    position: absolute;
-    left: 0;
-    top: 18px;
-    font-size: 16px;
-    font-weight: 300;
-    color: rgba(56, 56, 58, 0.5);
-    transition: all 0.2s ease; }
-  .main form .vi-text:focus + label, .main form .vi-text.vi-not-empty + label {
-    transform: translate(0, -20px);
-    font-size: 12px; }
-  .main form input {
-    padding-top: 9px;
-    margin-bottom: 8px;
-    height: 40px; }
-  .main form input, .main form textarea {
-    width: 100%;
-    font-family: 'Roboto Condensed', sans-serif;
-    -ms-border-radius: 0;
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
-    -o-border-radius: 0;
-    border-radius: 0;
-    border-top: none;
-    border-right: none;
-    border-left: none;
-    border-bottom: 1px solid rgba(56, 56, 58, 0.5);
-    outline: none;
-    transition: all .3s ease;
-    color: #38383a;
-    font-size: 16px;
-    font-weight: 400; }
-    .main form input:focus, .main form textarea:focus {
-      border-bottom: 1px solid #d84315; }
-  .main form textarea {
-    position: relative;
-    top: 40px;
-    resize: none;
-    padding: 0; }
-  .main form input[type=submit] {
-    display: none; }
-  .main form .btn-outline {
-    position: relative;
-    margin: 50px 0 0;
-    cursor: pointer;
-    display: inline-block;
-    width: 65px;
-    height: 65px;
-    -ms-border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -o-border-radius: 50%;
-    border-radius: 50%;
-    border: 1px solid #67A5BA;
-    transition: all .3s ease; }
-    .main form .btn-outline .arrow {
-      transform: rotate(-90deg); }
-    .main form .btn-outline:hover {
-      transform: rotate(360deg); }
+    .bottom .main .about {
+      width: 50%; }
+      .bottom .main .about .content p {
+        font-size: 18px;
+        line-height: 24px;
+        font-weight: 300;
+        color: #38383a;
+        margin-bottom: 20px;
+        display: inline-block; }
+    .bottom .main .contact {
+      width: 40%; }
+      .bottom .main .contact form {
+        display: flex;
+        flex-direction: column; }
+    .bottom .main form .info {
+      position: relative;
+      height: auto; }
+    .bottom .main form label {
+      pointer-events: none;
+      position: absolute;
+      left: 0;
+      top: 18px;
+      font-size: 16px;
+      font-weight: 300;
+      color: rgba(56, 56, 58, 0.5);
+      transition: all 0.2s ease; }
+    .bottom .main form .vi-text:focus + label, .bottom .main form .vi-text.vi-not-empty + label {
+      transform: translate(0, -20px);
+      font-size: 12px; }
+    .bottom .main form input {
+      padding-top: 9px;
+      margin-bottom: 8px;
+      height: 40px; }
+    .bottom .main form input, .bottom .main form textarea {
+      width: 100%;
+      font-family: 'Roboto Condensed', sans-serif;
+      -ms-border-radius: 0;
+      -webkit-border-radius: 0;
+      -moz-border-radius: 0;
+      -o-border-radius: 0;
+      border-radius: 0;
+      border-top: none;
+      border-right: none;
+      border-left: none;
+      border-bottom: 1px solid rgba(56, 56, 58, 0.5);
+      outline: none;
+      transition: all .3s ease;
+      color: #38383a;
+      font-size: 16px;
+      font-weight: 400; }
+      .bottom .main form input:focus, .bottom .main form textarea:focus {
+        border-bottom: 1px solid #d84315; }
+    .bottom .main form textarea {
+      position: relative;
+      top: 40px;
+      resize: none;
+      padding: 0; }
+    .bottom .main form input[type=submit] {
+      display: none; }
+    .bottom .main form .btn-outline {
+      position: relative;
+      margin: 50px 0 0;
+      cursor: pointer;
+      display: inline-block;
+      width: 65px;
+      height: 65px;
+      -ms-border-radius: 50%;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -o-border-radius: 50%;
+      border-radius: 50%;
+      border: 1px solid #67A5BA;
+      transition: all .3s ease; }
+      .bottom .main form .btn-outline .arrow {
+        transform: rotate(-90deg); }
+      .bottom .main form .btn-outline:hover {
+        transform: rotate(360deg); }
 
 footer {
   background: linear-gradient(45deg, #7EC9BA, #67A5BA);
@@ -270,21 +268,19 @@ footer {
     .top .container h1 .media-br {
       display: block; }
 
-  .bottom .container {
+  .bottom .main {
     flex-direction: column;
     align-items: center; }
-    .bottom .container h3 {
+    .bottom .main h3 {
       text-align: center;
       font-size: 20px;
       margin-bottom: 26px; }
-
-  .bottom .about, .bottom .contact {
-    width: 100%; }
-
-  .bottom .about .content p {
-    margin-bottom: 12px; }
-    .bottom .about .content p:last-child {
-      margin-bottom: 0; } }
+    .bottom .main .about, .bottom .main .contact {
+      width: 100%; }
+    .bottom .main .about .content p {
+      margin-bottom: 12px; }
+      .bottom .main .about .content p:last-child {
+        margin-bottom: 0; } }
 @media screen and (min-width: 300px) and (max-width: 767px) and (orientation: landscape) {
   .top {
     min-height: 300px; }
@@ -299,45 +295,40 @@ footer {
     font-size: 24px;
     line-height: 30px; }
 
-  .bottom .container {
-    flex-direction: column;
-    align-items: center; }
-    .bottom .container h3 {
-      text-align: center;
-      margin-bottom: 16px; }
-
   .bottom {
     height: auto; }
-
-  .bottom .about, .bottom .contact {
-    width: 100%; }
-
-  .bottom .about .content p {
-    margin-bottom: 10px;
-    font-size: 16px;
-    line-height: 22px; }
-    .bottom .about .content p:last-child {
-      margin-bottom: 0; }
-
-  .bottom .contact form textarea {
-    height: 100px; }
-  .bottom .contact form .btn-outline {
-    display: inline-block;
-    width: 45px;
-    height: 45px;
-    -ms-border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -o-border-radius: 50%;
-    border-radius: 50%; }
-    .bottom .contact form .btn-outline .arrow {
-      height: 18px;
-      margin: 13px; }
-
-  footer .iso {
-    display: none; }
-  footer p {
-    margin: 10px 0; } }
+    .bottom .main {
+      flex-direction: column;
+      align-items: center; }
+      .bottom .main h3 {
+        text-align: center;
+        margin-bottom: 16px; }
+      .bottom .main .about, .bottom .main .contact {
+        width: 100%; }
+      .bottom .main .about .content p {
+        margin-bottom: 10px;
+        font-size: 16px;
+        line-height: 22px; }
+        .bottom .main .about .content p:last-child {
+          margin-bottom: 0; }
+      .bottom .main .contact form textarea {
+        height: 100px; }
+      .bottom .main .contact form .btn-outline {
+        display: inline-block;
+        width: 45px;
+        height: 45px;
+        -ms-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -o-border-radius: 50%;
+        border-radius: 50%; }
+        .bottom .main .contact form .btn-outline .arrow {
+          height: 18px;
+          margin: 13px; }
+    .bottom footer .iso {
+      display: none; }
+    .bottom footer p {
+      margin: 10px 0; } }
 @media screen and (min-width: 300px) and (max-width: 767px) and (orientation: portrait) {
   .top .media-hide {
     display: none; }
@@ -349,42 +340,37 @@ footer {
     font-size: 24px;
     line-height: 30px; }
 
-  .bottom .container {
-    flex-direction: column;
-    align-items: center; }
-    .bottom .container h3 {
-      text-align: center;
-      margin-bottom: 16px; }
-
   .bottom {
     height: auto; }
-
-  .bottom .about, .bottom .contact {
-    width: 100%; }
-
-  .bottom .about .content p {
-    margin-bottom: 10px;
-    font-size: 16px;
-    line-height: 22px; }
-    .bottom .about .content p:last-child {
-      margin-bottom: 0; }
-
-  .bottom .contact form .btn-outline {
-    display: inline-block;
-    width: 45px;
-    height: 45px;
-    -ms-border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -o-border-radius: 50%;
-    border-radius: 50%; }
-    .bottom .contact form .btn-outline .arrow {
-      height: 18px;
-      margin: 13px; }
-
-  footer .iso {
-    display: none; }
-  footer p {
-    margin: 10px 0; } }
+    .bottom .main {
+      flex-direction: column;
+      align-items: center; }
+      .bottom .main h3 {
+        text-align: center;
+        margin-bottom: 16px; }
+      .bottom .main .about, .bottom .main .contact {
+        width: 100%; }
+      .bottom .main .about .content p {
+        margin-bottom: 10px;
+        font-size: 16px;
+        line-height: 22px; }
+        .bottom .main .about .content p:last-child {
+          margin-bottom: 0; }
+      .bottom .main .contact form .btn-outline {
+        display: inline-block;
+        width: 45px;
+        height: 45px;
+        -ms-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -o-border-radius: 50%;
+        border-radius: 50%; }
+        .bottom .main .contact form .btn-outline .arrow {
+          height: 18px;
+          margin: 13px; }
+    .bottom footer .iso {
+      display: none; }
+    .bottom footer p {
+      margin: 10px 0; } }
 
 /*# sourceMappingURL=style.css.map */
