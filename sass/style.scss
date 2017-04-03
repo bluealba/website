@@ -9,7 +9,7 @@
 	border-radius: $radio;
 }
 
-@mixin box-shadow($x, $y, $blur, $color-box) {
+@mixin box-shadow($x, $y, $blur, $color-box){
 	-ms-box-shadow: $x $y $blur $color-box;
 	-webkit-box-shadow: $x $y $blur $color-box;
 	-moz-box-shadow: $x $y $blur $color-box;
@@ -24,22 +24,22 @@
 	@include border-radius(50%);
 }
 
-@-webkit-keyframes moveBg {
+@-webkit-keyframes moveBg{
     0%{background-position:0% 50%}
     50%{background-position:100% 50%}
     100%{background-position:0% 50%}
 }
-@-moz-keyframes moveBg {
+@-moz-keyframes moveBg{
     0%{background-position:0% 50%}
     50%{background-position:100% 50%}
     100%{background-position:0% 50%}
 }
-@-o-keyframes moveBg {
+@-o-keyframes moveBg{
     0%{background-position:0% 50%}
     50%{background-position:100% 50%}
     100%{background-position:0% 50%}
 }
-@keyframes moveBg {
+@keyframes moveBg{
     0%{background-position:0% 50%}
     50%{background-position:100% 50%}
     100%{background-position:0% 50%}
@@ -85,9 +85,7 @@ a{
 	margin: 19px;
 	fill: $ba-secondary;
 }
-.bottom{
-	background: #fff;
-}
+
 .top{
 	background: linear-gradient(45deg, $ba-secondary, #7EC9BA);
 	background-size: 400% 400%;
@@ -127,27 +125,27 @@ a{
 	}
 }
 
-.main{
-	display: flex;
-	justify-content: space-between;
-	flex-grow: 1;
-	h3{
-		letter-spacing: 1px;
-		text-transform: uppercase;
-		font-size: 14px;
-		font-weight: 700;
-		color: $ba-ether;
-		margin-bottom: 46px;
-	}
-	.about, .contact{
-		box-sizing: border-box;
-		padding: 20px 0;
-		display: inline-block;
-	}
-	.about{
-		width: 50%;
-		.content{
-			p{
+.bottom{
+	background: #fff;
+	.main{
+		display: flex;
+		justify-content: space-between;
+		h3{
+			letter-spacing: 1px;
+			text-transform: uppercase;
+			font-size: 14px;
+			font-weight: 700;
+			color: $ba-ether;
+			margin-bottom: 46px;
+		}
+		.about, .contact{
+			box-sizing: border-box;
+			padding: 20px 0;
+			display: inline-block;
+		}
+		.about{
+			width: 50%;
+			.content p{
 				font-size: 18px;
 				line-height: 24px;
 				font-weight: 300;
@@ -156,78 +154,74 @@ a{
 				display: inline-block;
 			}
 		}
-	}
-	.contact{
-		width: 40%;
-		form{
-			display: flex;
-			flex-direction: column;
-		}
-	}
-	form{
-		.info{
-			position: relative;
-			height: auto;
-		}
-		label{
-			pointer-events: none;
-			position: absolute;
-			left: 0;
-			top: 18px;
-			font-size: 16px;
-		    font-weight: 300;
-		    color: rgba($ba-primary, .5);
-		    transition: all 0.2s ease;
-		}
-		.vi-text:focus + label, .vi-text.vi-not-empty + label{
-    		transform: translate(0, -20px);
-    		font-size: 12px;
-    	}
-		input{
-			padding-top: 9px;
-			margin-bottom: 8px;
-			height: 40px;
-		}
-		input, textarea{
-			width: 100%;
-			font-family: 'Roboto Condensed', sans-serif;
-			@include border-radius(0);
-			border-top: none;
-			border-right: none;
-			border-left: none;
-			border-bottom: 1px solid rgba($ba-primary, .5);
-			outline: none;
-			transition: all .3s ease;
-			color: $ba-primary;
-			font-size: 16px;
-			font-weight: 400;
-			&:focus{
-				border-bottom: 1px solid $ba-pop;
+		.contact{
+			width: 40%;
+			form{
+				display: flex;
+				flex-direction: column;
+				.info{
+					position: relative;
+					height: auto;
+				}
 			}
-		}
-		textarea{
-			position: relative;
-			top: 40px;
-			resize: none;
-			padding: 0;
-		}
-		input[type=submit]{
-			height: 38px;
-			width: 120px;
-			position: relative;
-		}
-		.btn-outline{
-			position: relative;
-			margin: 50px 0 0;
-			cursor: pointer;
-			@include btn(65px,none);
-			border: 1px solid $ba-secondary;
-			transition: all .3s ease;
-			.arrow{
-				transform: rotate(-90deg);
+			label{
+				pointer-events: none;
+				position: absolute;
+				left: 0;
+				top: 18px;
+				font-size: 16px;
+			    font-weight: 300;
+			    color: rgba($ba-primary, .5);
+			    transition: all 0.2s ease;
 			}
-			&:hover{
-				transform: rotate(360deg);
+			.vi-text:focus + label, .vi-text.vi-not-empty + label{
+	    		transform: translate(0, -20px);
+	    		font-size: 12px;
+	    	}
+			input{
+				padding-top: 9px;
+				margin-bottom: 8px;
+				height: 40px;
+			}
+			input, textarea{
+				width: 100%;
+				font-family: 'Roboto Condensed', sans-serif;
+				@include border-radius(0);
+				border-top: none;
+				border-right: none;
+				border-left: none;
+				border-bottom: 1px solid rgba($ba-primary, .5);
+				outline: none;
+				transition: all .3s ease;
+				color: $ba-primary;
+				font-size: 16px;
+				font-weight: 400;
+				&:focus{
+					border-bottom: 1px solid $ba-pop;
+				}
+			}
+			textarea{
+				position: relative;
+				top: 40px;
+				resize: none;
+				padding: 0;
+			}
+			input[type=submit]{
+				display: none;
+			}
+			.btn-outline{
+				position: relative;
+				margin: 50px 0 0;
+				cursor: pointer;
+				@include btn(65px,none);
+				border: 1px solid $ba-secondary;
+				transition: all .3s ease;
+				.arrow{
+					transform: rotate(-90deg);
+				}
+				&:hover{
+					transform: rotate(360deg);
+				}
 			}
 		}
 	}
@@ -251,7 +245,6 @@ footer{
 	}
 }
 
-
 @media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape){
 	.top .container{
 		.logo{
@@ -270,7 +263,7 @@ footer{
 			}
 		}
 	}
-	.bottom .container{
+	.bottom .main{
 		flex-direction: column;
 		align-items: center;
 		h3{
@@ -278,14 +271,14 @@ footer{
 			font-size: 20px;
 			margin-bottom: 26px;
 		}
-	}
-	.bottom .about, .bottom .contact{
-		width: 100%;
-	}
-	.bottom .about .content p{
-		margin-bottom: 12px;
-		&:last-child{
-			margin-bottom: 0;
+		.about, .contact{
+			width: 100%;
+		}
+		.about .content p{
+			margin-bottom: 12px;
+			&:last-child{
+				margin-bottom: 0;
+			}
 		}
 	}
 }
@@ -307,46 +300,46 @@ footer{
 			line-height: 30px;
 		}
 	}
-	.bottom .container{
-		flex-direction: column;
-		align-items: center;
-		h3{
-			text-align: center;
-			margin-bottom: 16px;
-		}
-	}
 	.bottom{
 		height: auto;
-	}
-	.bottom .about, .bottom .contact{
-		width: 100%;
-	}
-	.bottom .about .content p{
-		margin-bottom: 10px;
-		font-size: 16px;
-		line-height: 22px;
-		&:last-child{
-			margin-bottom: 0;
-		}
-	}
-	.bottom .contact form{
-		textarea{
-			height: 100px;
-		}
-		.btn-outline{
-			@include btn(45px,none);
-			.arrow{
-				height: 18px;
-				margin: 13px;
+		.main{
+			flex-direction: column;
+			align-items: center;
+			h3{
+				text-align: center;
+				margin-bottom: 16px;
+			}
+			.about, .contact{
+				width: 100%;
+			}
+			.about .content p{
+				margin-bottom: 10px;
+				font-size: 16px;
+				line-height: 22px;
+				&:last-child{
+					margin-bottom: 0;
+				}
+			}
+			.contact form{
+				textarea{
+					height: 100px;
+				}
+				.btn-outline{
+					@include btn(45px,none);
+					.arrow{
+						height: 18px;
+						margin: 13px;
+					}
+				}
 			}
 		}
-	}
-	footer{
-		.iso{
-			display: none;
-		}
-		p{
-			margin: 10px 0;
+		footer{
+			.iso{
+				display: none;
+			}
+			p{
+				margin: 10px 0;
+			}
 		}
 	}
 }
@@ -365,43 +358,41 @@ footer{
 			line-height: 30px;
 		}
 	}
-	.bottom .container{
-		flex-direction: column;
-		align-items: center;
-		h3{
-			text-align: center;
-			margin-bottom: 16px;
-		}
-	}
 	.bottom{
 		height: auto;
-	}
-	.bottom .about, .bottom .contact{
-		width: 100%;
-	}
-	.bottom .about .content p{
-		margin-bottom: 10px;
-		font-size: 16px;
-		line-height: 22px;
-		&:last-child{
-			margin-bottom: 0;
-		}
-	}
-	.bottom .contact form{
-		.btn-outline{
-			@include btn(45px,none);
-			.arrow{
-				height: 18px;
-				margin: 13px;
+		.main{
+			flex-direction: column;
+			align-items: center;
+			h3{
+				text-align: center;
+				margin-bottom: 16px;
+			}
+			.about, .contact{
+				width: 100%;
+			}
+			.about .content p{
+				margin-bottom: 10px;
+				font-size: 16px;
+				line-height: 22px;
+				&:last-child{
+					margin-bottom: 0;
+				}
+			}
+			.contact form .btn-outline{
+				@include btn(45px,none);
+				.arrow{
+					height: 18px;
+					margin: 13px;
+				}
 			}
 		}
-	}
-	footer{
-		.iso{
-			display: none;
-		}
-		p{
-			margin: 10px 0;
+		footer{
+			.iso{
+				display: none;
+			}
+			p{
+				margin: 10px 0;
+			}
 		}
 	}
 }
