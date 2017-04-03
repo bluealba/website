@@ -4,21 +4,21 @@ $(document).ready(function() {
 	$("#contact-form").submit(function(e) {
 		e.preventDefault();
 		let form = $(this);
-		console.log(form);
 		$.ajax({
 			url: form.attr("action"),
 			type: form.attr("method"),
-			// headers: {
-			// 	"Access-Control-Allow-Origin": "*"
-			// },
+			contentType: "application/json",
 			data: JSON.stringify({
-				name: "Joe Doe",
-				company: "Blue Alba",
-				email: "joe.doe@bluealba.com",
-				message: "Hello!!!"
+				name: $("input[name='name'").val(),
+				company: $("input[name='company'").val(),
+				email: $("input[name='email'").val(),
+				message: $("textarea[name='message'").val()
 			}),
 			success: function(response){
-				alert(response);
+				form.addClass("submitted");
+			},
+			failed: function(response){
+				form.addClass("error");
 			}
 		});
 	});
