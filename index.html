@@ -17,12 +17,14 @@
 			<h1>Innovative Technology <span class="media-br">for the Financial Industry</span></h1>
 		</div>
 		<div class="container media-hide">
-			<span class="btn-fill">
-				<svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="75.5 0 130 130"><polygon points="194.1 53.6 148.6 99.1 148.6 0 132.4 0 132.4 99.1 86.9 53.6 75.5 65 140.5 130 205.5 65 "/></svg>
-			</span>
+			<a href="#bottom">
+				<span class="btn-fill">
+					<svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="75.5 0 130 130"><polygon points="194.1 53.6 148.6 99.1 148.6 0 132.4 0 132.4 99.1 86.9 53.6 75.5 65 140.5 130 205.5 65 "/></svg>
+				</span>
+			</a>	
 		</div>
 	</section>
-	<section class="bottom">
+	<section class="bottom" id="bottom">
 		<div class="main">
 			<div class="container">
 				<div class="about">
@@ -39,11 +41,15 @@
 					<form action="send.php" action="POST">
 						<div class="info">
 							<input type="text" name="name" id="name" required class="vi-text">
-							<label for="name">Your name</label>
+							<label for="name">Name</label>
 						</div>
+						<div class="info">
+							<input type="text" name="company" id="company" required class="vi-text">
+							<label for="company">Company</label>
+						</div>						
 						<div class="info">	
 							<input type="email" name="email" id="email" required class="vi-text">
-							<label for="email">Your email</label>
+							<label for="email">Email</label>
 						</div>
 						<div class="info">
 							<label for="message">How can we help?</label>	
@@ -68,5 +74,5 @@
 		</footer>
 	</section>
 </body>
-<script type="text/javascript" src="scripts/app.js"></script>
+<script src="scripts/app.js"></script>
 </html>
