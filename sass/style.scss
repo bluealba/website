@@ -64,7 +64,9 @@ a{
 	margin: 19px;
 	fill: $ba-secondary;
 }
-
+.bottom{
+	background: #fff;
+}
 .top{
 	background: linear-gradient(45deg, $ba-secondary, #7EC9BA);
 	width: 100vw;
@@ -100,14 +102,9 @@ a{
 }
 
 .main{
-	min-height: fit-content;
 	display: flex;
+	justify-content: space-between;
 	flex-grow: 1;
-	background: #fff;
-	.container{
-		display: flex;
-		justify-content: space-between;
-	}
 	h3{
 		letter-spacing: 1px;
 		text-transform: uppercase;
@@ -117,6 +114,7 @@ a{
 		margin-bottom: 46px;
 	}
 	.about, .contact{
+		box-sizing: border-box;
 		padding: 20px 0;
 		display: inline-block;
 	}
@@ -167,6 +165,7 @@ a{
 		input, textarea{
 			width: 100%;
 			font-family: 'Roboto Condensed', sans-serif;
+			@include border-radius(0);
 			border-top: none;
 			border-right: none;
 			border-left: none;
@@ -207,7 +206,6 @@ a{
 }
 
 footer{
-	min-height: fit-content;
 	background: linear-gradient(45deg, #7EC9BA, $ba-secondary);
 	color: #fff;
 	width: 100vw;
@@ -289,6 +287,9 @@ footer{
 			margin-bottom: 16px;
 		}
 	}
+	.bottom{
+		height: auto;
+	}		
 	.bottom .about, .bottom .contact{
 		width: 100%;
 	}
@@ -343,6 +344,9 @@ footer{
 			text-align: center;
 			margin-bottom: 16px;
 		}
+	}
+	.bottom{
+		height: auto;
 	}
 	.bottom .about, .bottom .contact{
 		width: 100%;

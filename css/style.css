@@ -78,6 +78,9 @@ a {
   margin: 19px;
   fill: #67A5BA; }
 
+.bottom {
+  background: #fff; }
+
 .top {
   background: linear-gradient(45deg, #67A5BA, #7EC9BA);
   width: 100vw;
@@ -117,13 +120,9 @@ a {
       transform: scale(1.1, 1.1); }
 
 .main {
-  min-height: fit-content;
   display: flex;
-  flex-grow: 1;
-  background: #fff; }
-  .main .container {
-    display: flex;
-    justify-content: space-between; }
+  justify-content: space-between;
+  flex-grow: 1; }
   .main h3 {
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -132,6 +131,7 @@ a {
     color: #595959;
     margin-bottom: 46px; }
   .main .about, .main .contact {
+    box-sizing: border-box;
     padding: 20px 0;
     display: inline-block; }
   .main .about {
@@ -170,6 +170,11 @@ a {
   .main form input, .main form textarea {
     width: 100%;
     font-family: 'Roboto Condensed', sans-serif;
+    -ms-border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -o-border-radius: 0;
+    border-radius: 0;
     border-top: none;
     border-right: none;
     border-left: none;
@@ -208,7 +213,6 @@ a {
       transform: rotate(360deg); }
 
 footer {
-  min-height: fit-content;
   background: linear-gradient(45deg, #7EC9BA, #67A5BA);
   color: #fff;
   width: 100vw;
@@ -269,6 +273,9 @@ footer {
       text-align: center;
       margin-bottom: 16px; }
 
+  .bottom {
+    height: auto; }
+
   .bottom .about, .bottom .contact {
     width: 100%; }
 
@@ -315,6 +322,9 @@ footer {
     .bottom .container h3 {
       text-align: center;
       margin-bottom: 16px; }
+
+  .bottom {
+    height: auto; }
 
   .bottom .about, .bottom .contact {
     width: 100%; }
