@@ -45,6 +45,34 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+@-webkit-keyframes moveBg {
+  0% {
+    background-position: 0% 50%; }
+  50% {
+    background-position: 100% 50%; }
+  100% {
+    background-position: 0% 50%; } }
+@-moz-keyframes moveBg {
+  0% {
+    background-position: 0% 50%; }
+  50% {
+    background-position: 100% 50%; }
+  100% {
+    background-position: 0% 50%; } }
+@-o-keyframes moveBg {
+  0% {
+    background-position: 0% 50%; }
+  50% {
+    background-position: 100% 50%; }
+  100% {
+    background-position: 0% 50%; } }
+@keyframes moveBg {
+  0% {
+    background-position: 0% 50%; }
+  50% {
+    background-position: 100% 50%; }
+  100% {
+    background-position: 0% 50%; } }
 * {
   box-sizing: border-box; }
 
@@ -83,6 +111,11 @@ a {
 
 .top {
   background: linear-gradient(45deg, #67A5BA, #7EC9BA);
+  background-size: 400% 400%;
+  -webkit-animation: moveBg 30s ease infinite;
+  -moz-animation: moveBg 30s ease infinite;
+  -o-animation: moveBg 30s ease infinite;
+  animation: moveBg 30s ease infinite;
   width: 100vw;
   min-height: 600px;
   text-align: center;
