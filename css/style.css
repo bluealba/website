@@ -179,69 +179,69 @@ a {
       .bottom .main .contact form {
         display: flex;
         flex-direction: column; }
-    .bottom .main form .info {
-      position: relative;
-      height: auto; }
-    .bottom .main form label {
-      pointer-events: none;
-      position: absolute;
-      left: 0;
-      top: 18px;
-      font-size: 16px;
-      font-weight: 300;
-      color: rgba(56, 56, 58, 0.5);
-      transition: all 0.2s ease; }
-    .bottom .main form .vi-text:focus + label, .bottom .main form .vi-text.vi-not-empty + label {
-      transform: translate(0, -20px);
-      font-size: 12px; }
-    .bottom .main form input {
-      padding-top: 9px;
-      margin-bottom: 8px;
-      height: 40px; }
-    .bottom .main form input, .bottom .main form textarea {
-      width: 100%;
-      font-family: 'Roboto Condensed', sans-serif;
-      -ms-border-radius: 0;
-      -webkit-border-radius: 0;
-      -moz-border-radius: 0;
-      -o-border-radius: 0;
-      border-radius: 0;
-      border-top: none;
-      border-right: none;
-      border-left: none;
-      border-bottom: 1px solid rgba(56, 56, 58, 0.5);
-      outline: none;
-      transition: all .3s ease;
-      color: #38383a;
-      font-size: 16px;
-      font-weight: 400; }
-      .bottom .main form input:focus, .bottom .main form textarea:focus {
-        border-bottom: 1px solid #d84315; }
-    .bottom .main form textarea {
-      position: relative;
-      top: 40px;
-      resize: none;
-      padding: 0; }
-    .bottom .main form input[type=submit] {
-      display: none; }
-    .bottom .main form .btn-outline {
-      position: relative;
-      margin: 50px 0 0;
-      cursor: pointer;
-      display: inline-block;
-      width: 65px;
-      height: 65px;
-      -ms-border-radius: 50%;
-      -webkit-border-radius: 50%;
-      -moz-border-radius: 50%;
-      -o-border-radius: 50%;
-      border-radius: 50%;
-      border: 1px solid #67A5BA;
-      transition: all .3s ease; }
-      .bottom .main form .btn-outline .arrow {
-        transform: rotate(-90deg); }
-      .bottom .main form .btn-outline:hover {
-        transform: rotate(360deg); }
+        .bottom .main .contact form .info {
+          position: relative;
+          height: auto; }
+      .bottom .main .contact label {
+        pointer-events: none;
+        position: absolute;
+        left: 0;
+        top: 18px;
+        font-size: 16px;
+        font-weight: 300;
+        color: rgba(56, 56, 58, 0.5);
+        transition: all 0.2s ease; }
+      .bottom .main .contact .vi-text:focus + label, .bottom .main .contact .vi-text.vi-not-empty + label {
+        transform: translate(0, -20px);
+        font-size: 12px; }
+      .bottom .main .contact input {
+        padding-top: 9px;
+        margin-bottom: 8px;
+        height: 40px; }
+      .bottom .main .contact input, .bottom .main .contact textarea {
+        width: 100%;
+        font-family: 'Roboto Condensed', sans-serif;
+        -ms-border-radius: 0;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        -o-border-radius: 0;
+        border-radius: 0;
+        border-top: none;
+        border-right: none;
+        border-left: none;
+        border-bottom: 1px solid rgba(56, 56, 58, 0.5);
+        outline: none;
+        transition: all .3s ease;
+        color: #38383a;
+        font-size: 16px;
+        font-weight: 400; }
+        .bottom .main .contact input:focus, .bottom .main .contact textarea:focus {
+          border-bottom: 1px solid #d84315; }
+      .bottom .main .contact textarea {
+        position: relative;
+        top: 40px;
+        resize: none;
+        padding: 0; }
+      .bottom .main .contact input[type=submit] {
+        display: none; }
+      .bottom .main .contact .btn-outline {
+        position: relative;
+        margin: 50px 0 0;
+        cursor: pointer;
+        display: inline-block;
+        width: 65px;
+        height: 65px;
+        -ms-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -o-border-radius: 50%;
+        border-radius: 50%;
+        border: 1px solid #67A5BA;
+        transition: all .3s ease; }
+        .bottom .main .contact .btn-outline .arrow {
+          transform: rotate(-90deg); }
+        .bottom .main .contact .btn-outline:hover {
+          transform: rotate(360deg); }
 
 footer {
   background: linear-gradient(45deg, #7EC9BA, #67A5BA);
