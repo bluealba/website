@@ -10,7 +10,7 @@
 }
 
 @mixin box-shadow($x, $y, $blur, $color-box) {
-	-ms-box-shadow: $x $y $blur $color-box;	
+	-ms-box-shadow: $x $y $blur $color-box;
 	-webkit-box-shadow: $x $y $blur $color-box;
 	-moz-box-shadow: $x $y $blur $color-box;
 	-o-box-shadow: $x $y $blur $color-box;
@@ -109,7 +109,7 @@ a{
 		}
 		h1{
 			font-size: 30px;
-			font-weight: 300;			
+			font-weight: 300;
 			margin-bottom: 32px;
 		}
 		.btn-fill{
@@ -117,14 +117,14 @@ a{
 			@include btn(65px,#fff);
 			background: #fff;
 			@include box-shadow(0, 8px, 8px, rgba(0, 0, 0, .2));
-			border: 1px solid #fff;			
+			border: 1px solid #fff;
 			cursor: pointer;
 			transition: all .2s ease-in-out;
 			&:hover{
 				transform: scale(1.1, 1.1);
 			}
 		}
-	}	
+	}
 }
 
 .main{
@@ -134,9 +134,9 @@ a{
 	h3{
 		letter-spacing: 1px;
 		text-transform: uppercase;
-		font-size: 14px;		
+		font-size: 14px;
 		font-weight: 700;
-		color: $ba-ether;		
+		color: $ba-ether;
 		margin-bottom: 46px;
 	}
 	.about, .contact{
@@ -155,7 +155,7 @@ a{
 				margin-bottom: 20px;
 				display: inline-block;
 			}
-		}	
+		}
 	}
 	.contact{
 		width: 40%;
@@ -182,7 +182,7 @@ a{
 		.vi-text:focus + label, .vi-text.vi-not-empty + label{
     		transform: translate(0, -20px);
     		font-size: 12px;
-    	}	
+    	}
 		input{
 			padding-top: 9px;
 			margin-bottom: 8px;
@@ -212,7 +212,9 @@ a{
 			padding: 0;
 		}
 		input[type=submit]{
-			display: none;
+			height: 38px;
+			width: 120px;
+			position: relative;
 		}
 		.btn-outline{
 			position: relative;
@@ -260,13 +262,13 @@ footer{
 
 @media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait){
 	.top .container{
-		h1{ 
+		h1{
 			font-size: 38px;
 			line-height: 46px;
 			.media-br{
 				display: block;
 			}
-		}	
+		}
 	}
 	.bottom .container{
 		flex-direction: column;
@@ -315,7 +317,7 @@ footer{
 	}
 	.bottom{
 		height: auto;
-	}		
+	}
 	.bottom .about, .bottom .contact{
 		width: 100%;
 	}
@@ -349,7 +351,7 @@ footer{
 	}
 }
 
-@media screen and (min-width: 300px) and (max-width: 767px) and (orientation: portrait){	
+@media screen and (min-width: 300px) and (max-width: 767px) and (orientation: portrait){
 	.top .media-hide{
 		display: none;
 	}
@@ -401,5 +403,5 @@ footer{
 		p{
 			margin: 10px 0;
 		}
-	}	
+	}
 }
