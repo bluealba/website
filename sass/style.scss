@@ -104,9 +104,10 @@ a{
 }
 
 .main{
+	min-height: fit-content;
 	display: flex;
-	background: #fff;
 	flex-grow: 1;
+	background: #fff;
 	.container{
 		display: flex;
 		justify-content: space-between;
@@ -210,6 +211,7 @@ a{
 }
 
 footer{
+	min-height: fit-content;
 	background: linear-gradient(45deg, #7EC9BA, $ba-secondary);
 	color: #fff;
 	width: 100vw;

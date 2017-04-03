@@ -120,9 +120,10 @@ a {
       transform: scale(1.1, 1.1); }
 
 .main {
+  min-height: fit-content;
   display: flex;
-  background: #fff;
-  flex-grow: 1; }
+  flex-grow: 1;
+  background: #fff; }
   .main .container {
     display: flex;
     justify-content: space-between; }
@@ -210,6 +211,7 @@ a {
       transform: rotate(360deg); }
 
 footer {
+  min-height: fit-content;
   background: linear-gradient(45deg, #7EC9BA, #67A5BA);
   color: #fff;
   width: 100vw;
