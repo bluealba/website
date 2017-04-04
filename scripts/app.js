@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
 	// Initializing smooth-sroll Component.
-	smoothScroll.init();
+	$(".inner-link").smoothScroll({ speed: 780 });
 
 	// Contact Form Override.
 	$("#contact-form").submit(function(e) {
