@@ -223,7 +223,11 @@ a {
         resize: none;
         padding: 0; }
       .bottom .main .contact input[type=submit] {
-        display: none; }
+        border: 0;
+        outline: none;
+        padding: 0;
+        margin: 0;
+        height: 0; }
       .bottom .main .contact .btn-outline {
         position: relative;
         margin: 50px 0 0;
