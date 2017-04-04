@@ -80,6 +80,12 @@ a{
 	height: 100vh;
 }
 
+.bottom{
+	min-height: 680px;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 .arrow{
 	height: 24px;
 	margin: 19px;
@@ -170,14 +176,14 @@ a{
 				left: 0;
 				top: 18px;
 				font-size: 16px;
-			    font-weight: 300;
-			    color: rgba($ba-primary, .5);
-			    transition: all 0.2s ease;
+		   	font-weight: 300;
+		  	color: rgba($ba-primary, .5);
+		  	transition: all 0.2s ease;
 			}
 			.vi-text:focus + label, .vi-text.vi-not-empty + label{
-	    		transform: translate(0, -20px);
-	    		font-size: 12px;
-	    	}
+    		transform: translate(0, -20px);
+    		font-size: 12px;
+	    }
 			input{
 				padding-top: 9px;
 				margin-bottom: 8px;
@@ -251,10 +257,37 @@ footer{
 	}
 }
 
-@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape){
+@media screen and (min-width: 920px) and (max-width: 1024px) and (orientation: landscape){
 	.top .container{
 		.logo{
 			width: 250px;
+		}
+	}
+	.bottom{
+		height: 100vh;
+	}
+}
+
+@media screen and (min-width: 768) and (max-width: 920){
+	.bottom{
+		height: 100vh;
+		.main{
+			flex-direction: column;
+			align-items: center;
+			h3{
+				text-align: center;
+				font-size: 20px;
+				margin-bottom: 26px;
+			}
+			.about, .contact{
+				width: 100%;
+			}
+			.about .content p{
+				margin-bottom: 12px;
+				&:last-child{
+					margin-bottom: 0;
+				}
+			}
 		}
 	}
 }
@@ -269,27 +302,30 @@ footer{
 			}
 		}
 	}
-	.bottom .main{
-		flex-direction: column;
-		align-items: center;
-		h3{
-			text-align: center;
-			font-size: 20px;
-			margin-bottom: 26px;
-		}
-		.about, .contact{
-			width: 100%;
-		}
-		.about .content p{
-			margin-bottom: 12px;
-			&:last-child{
-				margin-bottom: 0;
+	.bottom{
+		min-height: 100vh;
+		.main{
+			flex-direction: column;
+			align-items: center;
+			h3{
+				text-align: center;
+				font-size: 20px;
+				margin-bottom: 26px;
+			}
+			.about, .contact{
+				width: 100%;
+			}
+			.about .content p{
+				margin-bottom: 12px;
+				&:last-child{
+					margin-bottom: 0;
+				}
 			}
 		}
 	}
 }
 
-@media screen and (min-width: 300px) and (max-width: 767px) and (orientation: landscape){
+@media screen and (min-width: 300px) and (max-width: 920px) and (orientation: landscape){
 	.top{
 		min-height: 300px;
 	}
@@ -350,7 +386,7 @@ footer{
 	}
 }
 
-@media screen and (min-width: 300px) and (max-width: 767px) and (orientation: portrait){
+@media screen and (min-width: 300px) and (max-width: 920px) and (orientation: portrait){
 	.top .media-hide{
 		display: none;
 	}

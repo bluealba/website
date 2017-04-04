@@ -101,6 +101,11 @@ a {
 .top, .bottom.main {
   height: 100vh; }
 
+.bottom {
+  min-height: 680px;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
 .arrow {
   height: 24px;
   margin: 19px;
@@ -264,9 +269,28 @@ footer {
     font-weight: 300;
     margin: 10px 0 25px; }
 
-@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+@media screen and (min-width: 920px) and (max-width: 1024px) and (orientation: landscape) {
   .top .container .logo {
-    width: 250px; } }
+    width: 250px; }
+
+  .bottom {
+    height: 100vh; } }
+@media screen and (min-width: 768) and (max-width: 920) {
+  .bottom {
+    height: 100vh; }
+    .bottom .main {
+      flex-direction: column;
+      align-items: center; }
+      .bottom .main h3 {
+        text-align: center;
+        font-size: 20px;
+        margin-bottom: 26px; }
+      .bottom .main .about, .bottom .main .contact {
+        width: 100%; }
+      .bottom .main .about .content p {
+        margin-bottom: 12px; }
+        .bottom .main .about .content p:last-child {
+          margin-bottom: 0; } }
 @media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
   .top .container h1 {
     font-size: 38px;
@@ -274,20 +298,22 @@ footer {
     .top .container h1 .media-br {
       display: block; }
 
-  .bottom .main {
-    flex-direction: column;
-    align-items: center; }
-    .bottom .main h3 {
-      text-align: center;
-      font-size: 20px;
-      margin-bottom: 26px; }
-    .bottom .main .about, .bottom .main .contact {
-      width: 100%; }
-    .bottom .main .about .content p {
-      margin-bottom: 12px; }
-      .bottom .main .about .content p:last-child {
-        margin-bottom: 0; } }
-@media screen and (min-width: 300px) and (max-width: 767px) and (orientation: landscape) {
+  .bottom {
+    min-height: 100vh; }
+    .bottom .main {
+      flex-direction: column;
+      align-items: center; }
+      .bottom .main h3 {
+        text-align: center;
+        font-size: 20px;
+        margin-bottom: 26px; }
+      .bottom .main .about, .bottom .main .contact {
+        width: 100%; }
+      .bottom .main .about .content p {
+        margin-bottom: 12px; }
+        .bottom .main .about .content p:last-child {
+          margin-bottom: 0; } }
+@media screen and (min-width: 300px) and (max-width: 920px) and (orientation: landscape) {
   .top {
     min-height: 300px; }
 
@@ -335,7 +361,7 @@ footer {
       display: none; }
     .bottom footer p {
       margin: 10px 0; } }
-@media screen and (min-width: 300px) and (max-width: 767px) and (orientation: portrait) {
+@media screen and (min-width: 300px) and (max-width: 920px) and (orientation: portrait) {
   .top .media-hide {
     display: none; }
 
