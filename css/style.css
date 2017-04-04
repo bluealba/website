@@ -199,6 +199,7 @@ a {
         margin-bottom: 8px;
         height: 40px; }
       .bottom .main .contact input, .bottom .main .contact textarea {
+        margin-left: 0;
         padding-left: 0;
         width: 100%;
         font-family: 'Roboto Condensed', sans-serif;

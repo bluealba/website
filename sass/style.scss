@@ -184,6 +184,7 @@ a{
 				height: 40px;
 			}
 			input, textarea{
+				margin-left: 0;
 				padding-left: 0;
 				width: 100%;
 				font-family: 'Roboto Condensed', sans-serif;
@@ -208,7 +209,6 @@ a{
 				padding: 0;
 			}
 			input[type=submit]{
-				// display: none;
 				border: 0;
 				outline: none;
 				padding: 0;
