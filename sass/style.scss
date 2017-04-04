@@ -81,6 +81,7 @@ a{
 }
 
 .bottom{
+	height: auto;
 	min-height: 680px;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -215,25 +216,27 @@ a{
 				padding: 0;
 			}
 			input[type=submit]{
-				border: 0;
-				outline: none;
-				padding: 0;
-				margin: 0;
-				height: 0;
+				background: none;
+				&:focus{
+					border: 1px solid $ba-secondary;
+				}
 			}
 			.btn-outline{
+				padding: 10px;
 				position: relative;
 				margin: 50px 0 0;
 				cursor: pointer;
 				@include btn(65px,none);
 				border: 1px solid $ba-secondary;
+			}
+			.arrow{
+				cursor: pointer;
+				margin: 9px -48px;
+				transform: rotate(-90deg);
 				transition: all .3s ease;
-				.arrow{
-					transform: rotate(-90deg);
-				}
-				&:hover{
-					transform: rotate(360deg);
-				}
+			}
+			input[type=submit]:hover + .arrow{
+				transform: rotate(270deg);
 			}
 		}
 	}

@@ -102,6 +102,7 @@ a {
   height: 100vh; }
 
 .bottom {
+  height: auto;
   min-height: 680px;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
@@ -230,12 +231,11 @@ a {
         resize: none;
         padding: 0; }
       .bottom .main .contact input[type=submit] {
-        border: 0;
-        outline: none;
-        padding: 0;
-        margin: 0;
-        height: 0; }
+        background: none; }
+        .bottom .main .contact input[type=submit]:focus {
+          border: 1px solid #67A5BA; }
       .bottom .main .contact .btn-outline {
+        padding: 10px;
         position: relative;
         margin: 50px 0 0;
         cursor: pointer;
@@ -247,12 +247,14 @@ a {
         -moz-border-radius: 50%;
         -o-border-radius: 50%;
         border-radius: 50%;
-        border: 1px solid #67A5BA;
+        border: 1px solid #67A5BA; }
+      .bottom .main .contact .arrow {
+        cursor: pointer;
+        margin: 9px -48px;
+        transform: rotate(-90deg);
         transition: all .3s ease; }
-        .bottom .main .contact .btn-outline .arrow {
-          transform: rotate(-90deg); }
-        .bottom .main .contact .btn-outline:hover {
-          transform: rotate(360deg); }
+      .bottom .main .contact input[type=submit]:hover + .arrow {
+        transform: rotate(270deg); }
 
 footer {
   background: linear-gradient(45deg, #7EC9BA, #67A5BA);
