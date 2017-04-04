@@ -184,6 +184,7 @@ a{
 				height: 40px;
 			}
 			input, textarea{
+				padding-left: 0;
 				width: 100%;
 				font-family: 'Roboto Condensed', sans-serif;
 				@include border-radius(0);
