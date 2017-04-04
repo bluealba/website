@@ -98,7 +98,7 @@ a {
   width: 80%;
   margin: auto; }
 
-.top, .bottom {
+.top, .bottom.main {
   height: 100vh; }
 
 .arrow {
