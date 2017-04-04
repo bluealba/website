@@ -1,6 +1,9 @@
 $(document).ready(function() {
 
-	// Contact Form Override
+	// Initializing smooth-sroll Component.
+	smoothScroll.init();
+
+	// Contact Form Override.
 	$("#contact-form").submit(function(e) {
 		e.preventDefault();
 		let form = $(this);
