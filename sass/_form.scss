@@ -1,0 +1,52 @@
+form{
+	display: flex;
+	flex-direction: column;	
+	.info{
+		position: relative;
+		height: auto;
+	}
+	label{
+		pointer-events: none;
+		position: absolute;
+		left: 0;
+		top: 18px;
+		font-size: 16px;
+		font-weight: 300;
+		color: rgba($ba-primary, .5);
+		transition: all 0.2s ease;
+	}
+	.vi-text:focus + label, .vi-text.vi-not-empty + label{
+	transform: translate(0, -20px);
+	font-size: 12px;
+	}
+	input[type=text], input[type=email]{
+		padding-top: 9px;
+		margin-bottom: 8px;
+		height: 40px;
+	}
+	input[type=text], input[type=email], textarea{
+		margin-left: 0;
+		padding-left: 0;
+		width: 100%;
+		font-family: 'Roboto Condensed', sans-serif;
+		@include border-radius(0);
+		border-top: none;
+		border-right: none;
+		border-left: none;
+		border-bottom: 1px solid rgba($ba-primary, .5);
+		outline: none;
+		transition: all .3s ease;
+		color: $ba-primary;
+		font-size: 16px;
+		font-weight: 400;
+		&:focus{
+			border-bottom: 1px solid $ba-pop;
+		}
+	}
+	textarea{
+		position: relative;
+		top: 40px;
+		resize: none;
+		padding: 0;
+	}
+}	

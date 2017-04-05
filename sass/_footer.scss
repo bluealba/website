@@ -1,0 +1,17 @@
+footer{
+	background: linear-gradient(45deg, #7EC9BA, $ba-secondary);
+	color: #fff;
+	width: 100vw;
+	text-align: center;
+	.iso{
+		fill: #fff;
+		width: 35px;
+		user-select: none;
+		margin-top: 25px;
+	}
+	p{
+		font-size: 12px;
+		font-weight: 300;
+		margin: 10px 0 25px;
+	}
+}

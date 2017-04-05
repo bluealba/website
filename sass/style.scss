@@ -1,49 +1,11 @@
 @import "normalize";
 @import "palette";
-
-@mixin border-radius($radio){
-	-ms-border-radius: $radio;
-	-webkit-border-radius: $radio;
-	-moz-border-radius: $radio;
-	-o-border-radius: $radio;
-	border-radius: $radio;
-}
-
-@mixin box-shadow($x, $y, $blur, $color-box){
-	-ms-box-shadow: $x $y $blur $color-box;
-	-webkit-box-shadow: $x $y $blur $color-box;
-	-moz-box-shadow: $x $y $blur $color-box;
-	-o-box-shadow: $x $y $blur $color-box;
-	box-shadow: $x $y $blur $color-box;
-}
-
-@mixin btn($diametro, $color){
-	display: inline-block;
-	width: $diametro;
-	height: $diametro;
-	@include border-radius(50%);
-}
-
-@-webkit-keyframes moveBg{
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
-}
-@-moz-keyframes moveBg{
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
-}
-@-o-keyframes moveBg{
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
-}
-@keyframes moveBg{
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
-}
+@import "logo";
+@import "h";
+@import "btn";
+@import "form";
+@import "footer";
+@import "moveBg";
 
 *{
 	box-sizing: border-box;
@@ -105,31 +67,6 @@ a{
 	text-align: center;
 	color: #fff;
 	font-weight: 300;
-	.container{
-		.logo{
-			fill: #fff;
-			user-select: none;
-			width: 300px;
-			margin: 62px 0;
-		}
-		h1{
-			font-size: 30px;
-			font-weight: 300;
-			margin-bottom: 32px;
-		}
-		.btn-fill{
-			user-select: none;
-			@include btn(65px,#fff);
-			background: #fff;
-			@include box-shadow(0, 8px, 8px, rgba(0, 0, 0, .2));
-			border: 1px solid #fff;
-			cursor: pointer;
-			transition: all .2s ease-in-out;
-			&:hover{
-				transform: scale(1.1, 1.1);
-			}
-		}
-	}
 }
 
 .bottom{
@@ -137,14 +74,6 @@ a{
 	.main{
 		display: flex;
 		justify-content: space-between;
-		h3{
-			letter-spacing: 1px;
-			text-transform: uppercase;
-			font-size: 14px;
-			font-weight: 700;
-			color: $ba-ether;
-			margin-bottom: 46px;
-		}
 		.about, .contact{
 			box-sizing: border-box;
 			padding: 20px 0;
@@ -163,100 +92,7 @@ a{
 		}
 		.contact{
 			width: 40%;
-			form{
-				display: flex;
-				flex-direction: column;
-				.info{
-					position: relative;
-					height: auto;
-				}
-			}
-			label{
-				pointer-events: none;
-				position: absolute;
-				left: 0;
-				top: 18px;
-				font-size: 16px;
-		   	font-weight: 300;
-		  	color: rgba($ba-primary, .5);
-		  	transition: all 0.2s ease;
-			}
-			.vi-text:focus + label, .vi-text.vi-not-empty + label{
-    		transform: translate(0, -20px);
-    		font-size: 12px;
-	    }
-			input{
-				padding-top: 9px;
-				margin-bottom: 8px;
-				height: 40px;
-			}
-			input, textarea{
-				margin-left: 0;
-				padding-left: 0;
-				width: 100%;
-				font-family: 'Roboto Condensed', sans-serif;
-				@include border-radius(0);
-				border-top: none;
-				border-right: none;
-				border-left: none;
-				border-bottom: 1px solid rgba($ba-primary, .5);
-				outline: none;
-				transition: all .3s ease;
-				color: $ba-primary;
-				font-size: 16px;
-				font-weight: 400;
-				&:focus{
-					border-bottom: 1px solid $ba-pop;
-				}
-			}
-			textarea{
-				position: relative;
-				top: 40px;
-				resize: none;
-				padding: 0;
-			}
-			input[type=submit]{
-				background: none;
-				&:focus{
-					border: 1px solid $ba-secondary;
-				}
-			}
-			.btn-outline{
-				padding: 10px;
-				position: relative;
-				margin: 50px 0 0;
-				cursor: pointer;
-				@include btn(65px,none);
-				border: 1px solid $ba-secondary;
-			}
-			.arrow{
-				cursor: pointer;
-				margin: 9px -48px;
-				transform: rotate(-90deg);
-				transition: all .3s ease;
-			}
-			input[type=submit]:hover + .arrow{
-				transform: rotate(270deg);
-			}
 		}
-	}
-}
-
-footer{
-	background: linear-gradient(45deg, #7EC9BA, $ba-secondary);
-	color: #fff;
-	width: 100vw;
-	text-align: center;
-	.iso{
-		fill: #fff;
-		width: 35px;
-		user-select: none;
-		margin-top: 25px;
-	}
-	p{
-		font-size: 12px;
-		font-weight: 300;
-		margin: 10px 0 25px;
 	}
 }
 
@@ -300,9 +136,6 @@ footer{
 		h1{
 			font-size: 38px;
 			line-height: 46px;
-			.media-br{
-				display: block;
-			}
 		}
 	}
 	.bottom{
@@ -371,10 +204,7 @@ footer{
 				}
 				.btn-outline{
 					@include btn(45px,none);
-					.arrow{
-						height: 18px;
-						margin: 13px;
-					}
+					background-size: auto 18px;
 				}
 			}
 		}
@@ -425,10 +255,7 @@ footer{
 			}
 			.contact form .btn-outline{
 				@include btn(45px,none);
-				.arrow{
-					height: 18px;
-					margin: 13px;
-				}
+				background-size: auto 18px;
 			}
 		}
 		footer{
