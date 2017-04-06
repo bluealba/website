@@ -316,7 +316,7 @@ a {
         display: inline-block; }
     .bottom .main .contact {
       width: 40%;
-      min-height: 553px; }
+      min-height: 565px; }
 
 @media screen and (min-width: 920px) and (max-width: 1024px) and (orientation: landscape) {
   .top .container .logo {
