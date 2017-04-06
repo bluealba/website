@@ -203,8 +203,10 @@ a{
 			.contact{
 				.sending, .submitted, .error{
 					align-items: center;
-					h4{
+					p{
 						margin: 9px 0 0;
+						font-size: 16px;
+						line-height: 22px;
 					}
 				}
 				.status{
@@ -265,8 +267,10 @@ a{
 			.contact{
 				.sending, .submitted, .error{
 					align-items: center;
-					h4{
+					p{
 						margin: 9px 0 0;
+						font-size: 16px;
+						line-height: 22px;
 					}
 				}
 				.status{

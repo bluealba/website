@@ -231,20 +231,20 @@ footer {
   display: flex;
   flex-direction: column;
   display: none; }
-  .sending h4, .submitted h4, .error h4 {
+  .sending p, .submitted p, .error p {
     margin: 18px 0 0;
     font-size: 18px;
     font-weight: 300;
     line-height: 24px; }
 
-.sending h4 {
+.sending p {
   color: #67A5BA;
   margin: 0; }
 
-.submitted h4 {
+.submitted p {
   color: #7EC9BA; }
 
-.error h4 {
+.error p {
   color: #d84315; }
 
 * {
@@ -399,8 +399,10 @@ a {
         background-size: auto 18px; }
       .bottom .main .contact .sending, .bottom .main .contact .submitted, .bottom .main .contact .error {
         align-items: center; }
-        .bottom .main .contact .sending h4, .bottom .main .contact .submitted h4, .bottom .main .contact .error h4 {
-          margin: 9px 0 0; }
+        .bottom .main .contact .sending p, .bottom .main .contact .submitted p, .bottom .main .contact .error p {
+          margin: 9px 0 0;
+          font-size: 16px;
+          line-height: 22px; }
       .bottom .main .contact .status {
         display: inline-block;
         width: 45px;
@@ -454,8 +456,10 @@ a {
         background-size: auto 18px; }
       .bottom .main .contact .sending, .bottom .main .contact .submitted, .bottom .main .contact .error {
         align-items: center; }
-        .bottom .main .contact .sending h4, .bottom .main .contact .submitted h4, .bottom .main .contact .error h4 {
-          margin: 9px 0 0; }
+        .bottom .main .contact .sending p, .bottom .main .contact .submitted p, .bottom .main .contact .error p {
+          margin: 9px 0 0;
+          font-size: 16px;
+          line-height: 22px; }
       .bottom .main .contact .status {
         display: inline-block;
         width: 45px;
