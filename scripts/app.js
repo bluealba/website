@@ -18,19 +18,16 @@ $(document).ready(function() {
 				message: $("textarea[name='message'").val()
 			}),
 			beforeSend: function(response){
-				// form.addClass("sending");
-				$(".sending").show();
 				$("#contact-form").hide();
+				$(".sending").show();
 			},
 			success: function(response){
-				// form.addClass("submitted");
+				$(".sending").hide();
 				$(".submitted").show();
-				$("#contact-form").hide();
 			},
 			error: function(response){
-				// form.addClass("error");
+				$(".sending").hide();
 				$(".error").show();
-				$("#contact-form").hide();
 			}
 		});
 		return false;
