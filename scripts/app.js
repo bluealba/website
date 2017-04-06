@@ -17,7 +17,7 @@ $(document).ready(function() {
 				email: $("input[name='email'").val(),
 				message: $("textarea[name='message'").val()
 			}),
-			submit: function(response){
+			beforeSend: function(response){
 				// form.addClass("sending");
 				$(".sending").show();
 				$("#contact-form").hide();
