@@ -17,13 +17,23 @@ $(document).ready(function() {
 				email: $("input[name='email'").val(),
 				message: $("textarea[name='message'").val()
 			}),
-			success: function(response){
-				form.addClass("submitted");
+			submit: function(response){
+				// form.addClass("sending");
+				$(".sending").show();
+				$("#contact-form").hide();
 			},
-			failed: function(response){
-				form.addClass("error");
+			success: function(response){
+				// form.addClass("submitted");
+				$(".submitted").show();
+				$("#contact-form").hide();
+			},
+			error: function(response){
+				// form.addClass("error");
+				$(".error").show();
+				$("#contact-form").hide();
 			}
 		});
+		return false;
 	});
 
 	// Textbox placeholder animation.

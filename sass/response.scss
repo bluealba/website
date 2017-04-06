@@ -1,0 +1,24 @@
+.sending, .submitted, .error{
+	display: flex;
+	flex-direction: column;
+	display: none;
+	h4{
+		margin: 18px 0 0;
+		font-size: 18px;
+		font-weight: 300;
+		line-height: 24px;
+	}
+}
+
+.sending h4{
+	color: $ba-secondary;
+	margin: 0;
+}
+
+.submitted h4{
+	color: #7EC9BA;
+}
+
+.error h4{
+	color: $ba-pop;
+}

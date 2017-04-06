@@ -203,6 +203,50 @@ footer {
     background-position: 100% 50%; }
   100% {
     background-position: 0% 50%; } }
+.status {
+  content: '';
+  padding: 10px;
+  display: inline-block;
+  width: 65px;
+  height: 65px;
+  -ms-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%; }
+  .status.sent {
+    background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xNDM1LjYgMzEzMy45IDE3MC42IDEzMCI+PHBvbHlnb24gcG9pbnRzPSItMTI3OC40IDMxMzMuOSAtMTM4MS4xIDMyMzYuNiAtMTQyMi4zIDMxOTYgLTE0MzUuNiAzMjA5LjMgLTEzODEuMSAzMjYzLjkgLTEyNjUgMzE0Ny4yICIgZmlsbD0iIzdFQzlCQSIvPjwvc3ZnPgo=");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto 24px;
+    border: 1px solid #7EC9BA; }
+  .status.not-sent {
+    background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii03NDkuNyA3ODEuNiAxMzAgMTMwIj48cG9seWdvbiBwb2ludHM9Ii02MTkuNyA3OTQuNiAtNjMyLjcgNzgxLjYgLTY4NC43IDgzMy42IC03MzYuNyA3ODEuNiAtNzQ5LjcgNzk0LjYgLTY5Ny43IDg0Ni42IC03NDkuNyA4OTguNiAtNzM2LjcgOTExLjYgLTY4NC43IDg1OS42IC02MzIuNyA5MTEuNiAtNjE5LjcgODk4LjYgLTY3MS43IDg0Ni42ICIgZmlsbD0iI0Q4NDMxNSIvPjwvc3ZnPgo=");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto 24px;
+    border: 1px solid #d84315; }
+
+.sending, .submitted, .error {
+  display: flex;
+  flex-direction: column;
+  display: none; }
+  .sending h4, .submitted h4, .error h4 {
+    margin: 18px 0 0;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 24px; }
+
+.sending h4 {
+  color: #67A5BA;
+  margin: 0; }
+
+.submitted h4 {
+  color: #7EC9BA; }
+
+.error h4 {
+  color: #d84315; }
+
 * {
   box-sizing: border-box; }
 
@@ -352,6 +396,20 @@ a {
         -o-border-radius: 50%;
         border-radius: 50%;
         background-size: auto 18px; }
+      .bottom .main .contact .sending, .bottom .main .contact .submitted, .bottom .main .contact .error {
+        align-items: center; }
+        .bottom .main .contact .sending h4, .bottom .main .contact .submitted h4, .bottom .main .contact .error h4 {
+          margin: 9px 0 0; }
+      .bottom .main .contact .status {
+        display: inline-block;
+        width: 45px;
+        height: 45px;
+        -ms-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -o-border-radius: 50%;
+        border-radius: 50%;
+        background-size: auto 18px; }
     .bottom footer .iso {
       display: none; }
     .bottom footer p {
@@ -384,6 +442,20 @@ a {
         .bottom .main .about .content p:last-child {
           margin-bottom: 0; }
       .bottom .main .contact form .btn-outline {
+        display: inline-block;
+        width: 45px;
+        height: 45px;
+        -ms-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -o-border-radius: 50%;
+        border-radius: 50%;
+        background-size: auto 18px; }
+      .bottom .main .contact .sending, .bottom .main .contact .submitted, .bottom .main .contact .error {
+        align-items: center; }
+        .bottom .main .contact .sending h4, .bottom .main .contact .submitted h4, .bottom .main .contact .error h4 {
+          margin: 9px 0 0; }
+      .bottom .main .contact .status {
         display: inline-block;
         width: 45px;
         height: 45px;

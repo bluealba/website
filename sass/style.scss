@@ -6,6 +6,8 @@
 @import "form";
 @import "footer";
 @import "moveBg";
+@import "status";
+@import "response";
 
 *{
 	box-sizing: border-box;
@@ -197,6 +199,18 @@ a{
 					background-size: auto 18px;
 				}
 			}
+			.contact{
+				.sending, .submitted, .error{
+					align-items: center;
+					h4{
+						margin: 9px 0 0;
+					}
+				}
+				.status{
+					@include btn(45px,none);
+					background-size: auto 18px;
+				}
+			}
 		}
 		footer{
 			.iso{
@@ -246,6 +260,18 @@ a{
 			.contact form .btn-outline{
 				@include btn(45px,none);
 				background-size: auto 18px;
+			}
+			.contact{
+				.sending, .submitted, .error{
+					align-items: center;
+					h4{
+						margin: 9px 0 0;
+					}
+				}
+				.status{
+					@include btn(45px,none);
+					background-size: auto 18px;
+				}
 			}
 		}
 		footer{
