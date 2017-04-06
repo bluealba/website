@@ -17,20 +17,17 @@ $(document).ready(function() {
 				email: $("input[name='email'").val(),
 				message: $("textarea[name='message'").val()
 			}),
-			submit: function(response){
-				// form.addClass("sending");
-				$(".sending").show();
+			beforeSend: function(response){
 				$("#contact-form").hide();
+				$(".sending").show();
 			},
 			success: function(response){
-				// form.addClass("submitted");
+				$(".sending").hide();
 				$(".submitted").show();
-				$("#contact-form").hide();
 			},
 			error: function(response){
-				// form.addClass("error");
+				$(".sending").hide();
 				$(".error").show();
-				$("#contact-form").hide();
 			}
 		});
 		return false;
