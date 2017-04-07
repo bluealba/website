@@ -90,10 +90,6 @@ a{
 		.contact{
 			width: 40%;
 			min-height: 565px;
-			input[type=submit]{
-				z-index: 999;
-				background: grey;
-			}
 		}
 	}
 }
@@ -153,6 +149,9 @@ a{
 					margin-bottom: 0;
 				}
 			}
+			.contact{
+				min-height: 0;
+			}
 		}
 	}
 }
@@ -198,12 +197,13 @@ a{
 				textarea{
 					height: 100px;
 				}
-				// .btn-outline{
-				// 	@include btn(45px,none);
-				// 	background-size: auto 18px;
-				// }
+				.btn-outline{
+					@include btn(45px,none);
+					background-size: auto 18px;
+				}
 			}
 			.contact{
+				min-height: 0;
 				.sending, .submitted, .error{
 					p{
 						font-size: 16px;
@@ -257,11 +257,12 @@ a{
 					margin-bottom: 0;
 				}
 			}
-			// .contact form .btn-outline{
-			// 	@include btn(45px,none);
-			// 	background-size: auto 18px;
-			// }
+			.contact form .btn-outline{
+				@include btn(45px,none);
+				background-size: auto 18px;
+			}
 			.contact{
+				min-height: 0;
 				.sending, .submitted, .error{
 					p{
 						font-size: 16px;

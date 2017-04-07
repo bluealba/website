@@ -12,10 +12,10 @@ $(document).ready(function() {
 			type: form.attr("method"),
 			contentType: "application/json",
 			data: JSON.stringify({
-				name: $("input[name='name'").val(),
-				company: $("input[name='company'").val(),
-				email: $("input[name='email'").val(),
-				message: $("textarea[name='message'").val()
+				name: $("input[name='name']").val(),
+				company: $("input[name='company']").val(),
+				email: $("input[name='email']").val(),
+				message: $("textarea[name='message']").val()
 			}),
 			beforeSend: function(response){
 				$("#contact-form").hide();
