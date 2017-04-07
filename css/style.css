@@ -161,21 +161,23 @@ form {
     padding: 0; }
 
 footer {
+  display: flex;
+  justify-content: space-between;
   background: linear-gradient(45deg, #7EC9BA, #67A5BA);
   color: #fff;
   width: 100vw;
   text-align: center; }
   footer .iso {
     fill: #fff;
-    width: 35px;
+    width: 25px;
     user-select: none;
-    margin: 25px 0 10px; }
+    margin: 20px 20px 0; }
   footer p, footer address {
-    font-size: 12px;
+    margin: 0 10px 10px;
+    display: inline-block;
+    font-size: 14px;
     line-height: 14px;
     font-weight: 300; }
-  footer p {
-    margin: 10px 0 25px; }
 
 @-webkit-keyframes moveBg {
   0% {
@@ -228,7 +230,7 @@ body {
   flex-direction: column;
   font-family: 'Roboto Condensed', sans-serif; }
 
-body, section, footer {
+body, section {
   display: flex;
   flex-direction: column;
   justify-content: space-between; }
