@@ -258,6 +258,9 @@ a{
 			// 	background-size: auto 18px;
 			// }
 			.contact{
+				input[type=submit]{
+					z-index: 999;
+				}
 				.sending, .submitted, .error{
 					p{
 						font-size: 16px;
