@@ -90,6 +90,11 @@ a{
 		.contact{
 			width: 40%;
 			min-height: 565px;
+			input[type=submit]{
+				z-index: 999;
+				background: grey;
+				margin-top: 60px;
+			}
 		}
 	}
 }
@@ -258,9 +263,6 @@ a{
 			// 	background-size: auto 18px;
 			// }
 			.contact{
-				input[type=submit]{
-					z-index: 999;
-				}
 				.sending, .submitted, .error{
 					p{
 						font-size: 16px;

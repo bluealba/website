@@ -258,6 +258,10 @@ a {
     .bottom .main .contact {
       width: 40%;
       min-height: 565px; }
+      .bottom .main .contact input[type=submit] {
+        z-index: 999;
+        background: grey;
+        margin-top: 60px; }
 
 @media screen and (min-width: 920px) and (max-width: 1024px) and (orientation: landscape) {
   .top .container .logo {
@@ -362,8 +366,6 @@ a {
         line-height: 22px; }
         .bottom .main .about .content p:last-child {
           margin-bottom: 0; }
-      .bottom .main .contact input[type=submit] {
-        z-index: 999; }
       .bottom .main .contact .sending p, .bottom .main .contact .submitted p, .bottom .main .contact .error p {
         font-size: 16px;
         line-height: 22px; }
