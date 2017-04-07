@@ -33,6 +33,9 @@ body, section{
 a{
 	text-decoration: none;
 }
+b {
+	font-weight: 400;
+}
 
 .container{
 	width: 80%;
@@ -213,14 +216,12 @@ a{
 			}
 		}
 		footer{
-			.iso{
+			justify-content: center;
+			:not(.copyright) {
 				display: none;
 			}
-			.media-add{
-				margin-top: 10px;
-			}
-			p{
-				margin: 10px 0;
+			.copyright {
+				line-height: 36px;
 			}
 		}
 	}
@@ -275,14 +276,12 @@ a{
 			}
 		}
 		footer{
-			.iso{
+			justify-content: center;
+			:not(.copyright) {
 				display: none;
 			}
-			.media-add{
-				margin-top: 10px;
-			}
-			p{
-				margin: 10px 0;
+			.copyright {
+				line-height: 36px;
 			}
 		}
 	}

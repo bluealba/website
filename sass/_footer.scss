@@ -1,21 +1,28 @@
 footer{
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-around;
+	align-items: center;
 	background: linear-gradient(45deg, #7EC9BA, $ba-secondary);
 	color: #fff;
 	width: 100vw;
-	text-align: center;
 	.iso{
 		fill: #fff;
-		width: 25px;
+		width: 36px;
 		user-select: none;
-		margin: 20px 20px 0;
 	}
 	p, address{
-		margin: 0 10px 10px;
 		display: inline-block;
-		font-size: 14px;
-		line-height: 14px;
+		font-size: 16px;
+		line-height: 1.1em;
 		font-weight: 300;
+	}
+	.copyright {
+		font-size: 14px;
+	}
+	a {
+		color: $ba-white;
+		&:hover{
+			text-decoration: underline;
+		}
 	}
 }

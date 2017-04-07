@@ -162,22 +162,26 @@ form {
 
 footer {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  align-items: center;
   background: linear-gradient(45deg, #7EC9BA, #67A5BA);
   color: #fff;
-  width: 100vw;
-  text-align: center; }
+  width: 100vw; }
   footer .iso {
     fill: #fff;
-    width: 25px;
-    user-select: none;
-    margin: 20px 20px 0; }
+    width: 36px;
+    user-select: none; }
   footer p, footer address {
-    margin: 0 10px 10px;
     display: inline-block;
-    font-size: 14px;
-    line-height: 14px;
+    font-size: 16px;
+    line-height: 1.1em;
     font-weight: 300; }
+  footer .copyright {
+    font-size: 14px; }
+  footer a {
+    color: #fff; }
+    footer a:hover {
+      text-decoration: underline; }
 
 @-webkit-keyframes moveBg {
   0% {
@@ -237,6 +241,9 @@ body, section {
 
 a {
   text-decoration: none; }
+
+b {
+  font-weight: 400; }
 
 .container {
   width: 80%;
@@ -374,12 +381,12 @@ a {
         .bottom .main .contact .sending p, .bottom .main .contact .submitted p, .bottom .main .contact .error p {
           font-size: 16px;
           line-height: 22px; }
-    .bottom footer .iso {
-      display: none; }
-    .bottom footer .media-add {
-      margin-top: 10px; }
-    .bottom footer p {
-      margin: 10px 0; } }
+    .bottom footer {
+      justify-content: center; }
+      .bottom footer :not(.copyright) {
+        display: none; }
+      .bottom footer .copyright {
+        line-height: 36px; } }
 @media screen and (min-width: 300px) and (max-width: 920px) and (orientation: portrait) {
   .top .media-hide {
     display: none; }
@@ -422,11 +429,11 @@ a {
         .bottom .main .contact .sending p, .bottom .main .contact .submitted p, .bottom .main .contact .error p {
           font-size: 16px;
           line-height: 22px; }
-    .bottom footer .iso {
-      display: none; }
-    .bottom footer .media-add {
-      margin-top: 10px; }
-    .bottom footer p {
-      margin: 10px 0; } }
+    .bottom footer {
+      justify-content: center; }
+      .bottom footer :not(.copyright) {
+        display: none; }
+      .bottom footer .copyright {
+        line-height: 36px; } }
 
 /*# sourceMappingURL=style.css.map */
