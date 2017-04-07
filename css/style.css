@@ -169,10 +169,12 @@ footer {
     fill: #fff;
     width: 35px;
     user-select: none;
-    margin-top: 25px; }
-  footer p {
+    margin: 25px 0 10px; }
+  footer p, footer address {
     font-size: 12px;
-    font-weight: 300;
+    line-height: 14px;
+    font-weight: 300; }
+  footer p {
     margin: 10px 0 25px; }
 
 @-webkit-keyframes moveBg {
@@ -372,6 +374,8 @@ a {
           line-height: 22px; }
     .bottom footer .iso {
       display: none; }
+    .bottom footer .media-add {
+      margin-top: 10px; }
     .bottom footer p {
       margin: 10px 0; } }
 @media screen and (min-width: 300px) and (max-width: 920px) and (orientation: portrait) {
@@ -418,6 +422,8 @@ a {
           line-height: 22px; }
     .bottom footer .iso {
       display: none; }
+    .bottom footer .media-add {
+      margin-top: 10px; }
     .bottom footer p {
       margin: 10px 0; } }
 

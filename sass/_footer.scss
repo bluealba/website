@@ -7,11 +7,14 @@ footer{
 		fill: #fff;
 		width: 35px;
 		user-select: none;
-		margin-top: 25px;
+		margin: 25px 0 10px;
+	}
+	p, address{
+		font-size: 12px;
+		line-height: 14px;
+		font-weight: 300;
 	}
 	p{
-		font-size: 12px;
-		font-weight: 300;
 		margin: 10px 0 25px;
 	}
 }
