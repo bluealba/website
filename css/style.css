@@ -86,31 +86,6 @@ h3 {
   .btn-fill:hover {
     transform: scale(1.1, 1.1); }
 
-.btn-outline {
-  content: '';
-  background: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkNhcGFfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHdpZHRoPSIxMzBweCIgaGVpZ2h0PSIxMzBweCIgdmlld0JveD0iMTYwLjUgMCAxMzAgMTMwIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDE2MC41IDAgMTMwIDEzMCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8cG9seWdvbiBmaWxsPSIjNjdBNUJBIiBwb2ludHM9IjI3OS4xLDUzLjYgMjMzLjYsOTkuMSAyMzMuNiwwIDIxNy40LDAgMjE3LjQsOTkuMSAxNzEuOSw1My42IDE2MC41LDY1IDIyNS41LDEzMCAyOTAuNSw2NSAiLz4NCjwvc3ZnPg0K");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: auto 24px;
-  transform: rotate(-90deg);
-  padding: 10px;
-  position: relative;
-  margin: 50px 0 0;
-  cursor: pointer;
-  display: inline-block;
-  width: 65px;
-  height: 65px;
-  -ms-border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -o-border-radius: 50%;
-  border-radius: 50%;
-  border: 1px solid #67A5BA;
-  outline: none;
-  transition: all .3s ease; }
-  .btn-outline:hover {
-    transform: rotate(270deg); }
-
 form {
   display: flex;
   flex-direction: column; }
@@ -353,16 +328,6 @@ a {
           margin-bottom: 0; }
       .bottom .main .contact form textarea {
         height: 100px; }
-      .bottom .main .contact form .btn-outline {
-        display: inline-block;
-        width: 45px;
-        height: 45px;
-        -ms-border-radius: 50%;
-        -webkit-border-radius: 50%;
-        -moz-border-radius: 50%;
-        -o-border-radius: 50%;
-        border-radius: 50%;
-        background-size: auto 18px; }
       .bottom .main .contact .sending p, .bottom .main .contact .submitted p, .bottom .main .contact .error p {
         font-size: 16px;
         line-height: 22px; }
@@ -397,16 +362,6 @@ a {
         line-height: 22px; }
         .bottom .main .about .content p:last-child {
           margin-bottom: 0; }
-      .bottom .main .contact form .btn-outline {
-        display: inline-block;
-        width: 45px;
-        height: 45px;
-        -ms-border-radius: 50%;
-        -webkit-border-radius: 50%;
-        -moz-border-radius: 50%;
-        -o-border-radius: 50%;
-        border-radius: 50%;
-        background-size: auto 18px; }
       .bottom .main .contact .sending p, .bottom .main .contact .submitted p, .bottom .main .contact .error p {
         font-size: 16px;
         line-height: 22px; }

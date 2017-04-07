@@ -194,10 +194,10 @@ a{
 				textarea{
 					height: 100px;
 				}
-				.btn-outline{
-					@include btn(45px,none);
-					background-size: auto 18px;
-				}
+				// .btn-outline{
+				// 	@include btn(45px,none);
+				// 	background-size: auto 18px;
+				// }
 			}
 			.contact{
 				.sending, .submitted, .error{
@@ -253,10 +253,10 @@ a{
 					margin-bottom: 0;
 				}
 			}
-			.contact form .btn-outline{
-				@include btn(45px,none);
-				background-size: auto 18px;
-			}
+			// .contact form .btn-outline{
+			// 	@include btn(45px,none);
+			// 	background-size: auto 18px;
+			// }
 			.contact{
 				.sending, .submitted, .error{
 					p{
