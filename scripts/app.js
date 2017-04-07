@@ -30,7 +30,6 @@ $(document).ready(function() {
 				$(".error").show();
 			}
 		});
-		return false;
 	});
 
 	// Textbox placeholder animation.
