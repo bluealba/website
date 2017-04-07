@@ -130,8 +130,6 @@ form {
     form input[type=text]:focus, form input[type=email]:focus, form textarea:focus {
       border-bottom: 1px solid #d84315; }
   form textarea {
-    position: relative;
-    top: 40px;
     resize: none;
     padding: 0; }
 
@@ -260,8 +258,7 @@ a {
       min-height: 565px; }
       .bottom .main .contact input[type=submit] {
         z-index: 999;
-        background: grey;
-        margin-top: 60px; }
+        background: grey; }
 
 @media screen and (min-width: 920px) and (max-width: 1024px) and (orientation: landscape) {
   .top .container .logo {
