@@ -6,17 +6,32 @@ $(document).ready(function() {
 	// Contact Form Override.
 	$("#contact-form").submit(function(e) {
 		e.preventDefault();
+		let formData = {
+			name: ($("input[name=name]").val() || "").trim(),
+			company: ($("input[name=company]").val() || "").trim(),
+			email: ($("input[name=email]").val() || "").trim(),
+			message: ($("textarea[name=message]").val() || "").trim()
+		};
+
+		if (!formData.name) {
+			$("input[name=name]").focus();
+			return false;
+		}
+		if (!formData.email) {
+			$("input[name=email]").focus();
+			return false;
+		}
+		if (!formData.message) {
+			$("textarea[name=message]").focus();
+			return false;
+		}
+
 		let form = $(this);
 		$.ajax({
 			url: form.attr("action"),
 			type: form.attr("method"),
 			contentType: "application/json",
-			data: JSON.stringify({
-				name: $("input[name='name']").val(),
-				company: $("input[name='company']").val(),
-				email: $("input[name='email']").val(),
-				message: $("textarea[name='message']").val()
-			}),
+			data: JSON.stringify(formData),
 			beforeSend: function(response){
 				$("#contact-form").hide();
 				$(".sending").show();
