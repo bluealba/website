@@ -1,3 +1,8 @@
+function validateEmail(email) {
+	let re = /[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,4}/igm;
+	return re.test(email);
+}
+
 $(document).ready(function() {
 
 	// Initializing smooth-sroll Component.
@@ -17,7 +22,7 @@ $(document).ready(function() {
 			$("input[name=name]").focus();
 			return false;
 		}
-		if (!formData.email) {
+		if (!formData.email || !validateEmail(formData.email)) {
 			$("input[name=email]").focus();
 			return false;
 		}
